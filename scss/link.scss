@@ -1,0 +1,7 @@
+@import "Ginkgo";
+
+.aBlue {
+	&:hover, &:active {
+		color: #0073e6 !important;
+	}
+}

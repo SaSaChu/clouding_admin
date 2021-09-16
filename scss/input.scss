@@ -1,0 +1,17 @@
+@import "Ginkgo";
+
+.form-control {
+	font-size: 1rem;
+
+	&::-webkit-input-placeholder  {
+		font-weight: 300;
+		color:rgba(199, 199, 199, 1) !important;
+	}
+}
+
+.checkBoxIndex {
+	width: 1.1em;
+  height: 1.2em;
+  margin-top: .15em;
+}
+
