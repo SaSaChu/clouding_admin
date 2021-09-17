@@ -1,4 +1,5 @@
 @import "Ginkgo";
+
 html {
   font-size: 13px;
 }
@@ -12,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   color: rgba(90, 90, 90, 1.00);
+  background-color: white !important;
 
   font-size: 13px;
   font-weight: 300;
@@ -21,78 +23,19 @@ body {
   @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
 }
 
+
+$colorLightBlue: rgba(25, 177, 243, 1.00);
+
+
+.menuFullBoxs {
+  display: inline-block;
+  width: 100%;
+  background-color: $colorLightBlue;
+}
+
 .footer {
   color: white;
   background-color: rgba(26, 54, 93, 1.00);
-}
-
-.btn-blue {
-  color: white;
-  background-color: #0073e6;
-  border-color: #0073e6;
-
-  &:hover {
-    color: #fff;
-    background-color: #006ac2;
-    border-color: #2e80fc;
-  }
-}
-
-.btn-check:focus + .btn-blue, .btn-blue:focus {
-  color: #fff;
-  background-color: #006ac2;
-  border-color: #2e80fc;
-  -webkit-box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-  box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-}
-
-.btn-check {
-  &:checked + .btn-blue, &:active + .btn-blue {
-    color: #fff;
-    background-color: #2e80fc;
-    border-color: #5c538f;
-  }
-}
-
-.btn-blue {
-  &:active, &.active {
-    color: #fff;
-    background-color: #2e80fc;
-    border-color: #5c538f;
-  }
-}
-
-.show > .btn-blue.dropdown-toggle {
-  color: #fff;
-  background-color: #2e80fc;
-  border-color: #5c538f;
-}
-
-.btn-check {
-  &:checked + .btn-blue:focus, &:active + .btn-blue:focus {
-    -webkit-box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-    box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-  }
-}
-
-.btn-blue {
-  &:active:focus, &.active:focus {
-    -webkit-box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-    box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-  }
-}
-
-.show > .btn-blue.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-  box-shadow: 0 0 0 0.15rem rgba(0, 115, 230, .5);
-}
-
-.btn-blue {
-  &:disabled, &.disabled {
-    color: #fff;
-    background-color: #0073e6;
-    border-color: #0073e6;
-  }
 }
 
 .userBoxs {
@@ -106,7 +49,12 @@ body {
   -webkit-box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
           box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
   @include border-radius(0);
+  margin-bottom: 0;
+  background-color: $colorLightBlue;
 }
 
+.dropdown-menu {
+  left: 25%;
+}
 
 
