@@ -1,15 +1,19 @@
 @import "Ginkgo";
 
+$colorLightBlue: rgba(25, 177, 243, 1.00);
+$colorGreyBlue: rgba(185, 214, 231, 1.00);
+$mainBlue: #0073e6;
+
 .aBlue {
 	&:hover, &:active {
-		color: #0073e6 !important;
+		color: $mainBlue !important;
 	}
 }
 
 .btn-blue {
   color: white;
-  background-color: #0073e6;
-  border-color: #0073e6;
+  background-color: $mainBlue;
+  border-color: $mainBlue;
 
   &:hover {
     color: #fff;
@@ -70,8 +74,8 @@
 .btn-blue {
   &:disabled, &.disabled {
     color: #fff;
-    background-color: #0073e6;
-    border-color: #0073e6;
+    background-color: $mainBlue;
+    border-color: $mainBlue;
   }
 }
 
@@ -85,8 +89,17 @@
 	color: white !important;
 	font-weight: 500;
 	text-align: center;
+  font-size: 1.15rem !important;
 }
 
+.dropdown-item {
+  font-size: 1.15rem;
+
+  &:hover {
+    color: rgba(0, 115, 230, 1.00) !important;
+    background-color: rgba(244, 239, 238, 1.00) !important;
+  }
+}
 
 
 

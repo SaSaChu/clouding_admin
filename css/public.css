@@ -14,4 +14,11 @@ body::selection { color: white; background-color: #78baff; }
 
 .topnav { -webkit-box-shadow: 0 -3px 31px 0 transparent, 0 6px 20px 0 transparent; box-shadow: 0 -3px 31px 0 transparent, 0 6px 20px 0 transparent; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; margin-bottom: 0; background-color: #19b1f3; }
 
-.dropdown-menu { left: 25%; }
+.dropdown-menu { left: calc(50% - 180px / 2); }
+
+.breadcrumb-item a { color: #0073e6 !important; }
+.breadcrumb-item:before { color: #0073e6 !important; }
+
+.page-content { margin-top: 170px !important; }
+
+.centBoxs { height: 300px; border: 1px solid rgba(255, 0, 0, 0.3); }

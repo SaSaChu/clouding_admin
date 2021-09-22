@@ -1,5 +1,9 @@
 @import "Ginkgo";
 
+$colorLightBlue: rgba(25, 177, 243, 1.00);
+$colorGreyBlue: rgba(185, 214, 231, 1.00);
+$mainBlue: #0073e6;
+
 html {
   font-size: 13px;
 }
@@ -54,7 +58,42 @@ $colorLightBlue: rgba(25, 177, 243, 1.00);
 }
 
 .dropdown-menu {
-  left: 25%;
+  left: calc(50% - 180px / 2);
 }
+
+.breadcrumb-item {
+  a {
+    color: $mainBlue !important;
+  }
+
+  &:before {
+    color: $mainBlue !important;
+  }
+}
+
+.page-content {
+  margin-top: 170px !important;
+}
+
+.centBoxs {
+  
+
+  // d
+  height: 300px;
+  border: 1px solid rgba(255, 0, 0, .3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
