@@ -1,106 +1,153 @@
-/*
-Error: Invalid CSS after "... #{$background}": expected "{", was ";"
-        on line 9 of /Users/Teresa/www/clouding_admin/scss/bootstrap/mixins/_table-variants.scss
-        from line 31 of /Users/Teresa/www/clouding_admin/scss/bootstrap/_mixins.scss
-        from line 14 of /Users/Teresa/www/clouding_admin/cmd/../scss/bootstrap/bootstrap-reboot.scss
+/*!
+ * Bootstrap Reboot v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+*, *::before, *::after { box-sizing: border-box; }
 
-4:     $color: color-contrast(opaque($body-bg, $background));
-5:     $hover-bg: mix($color, $background, percentage($table-hover-bg-factor));
-6:     $striped-bg: mix($color, $background, percentage($table-striped-bg-factor));
-7:     $active-bg: mix($color, $background, percentage($table-active-bg-factor));
-8: 
-9:     --#{$variable-prefix}table-bg: #{$background};
-10:     --#{$variable-prefix}table-striped-bg: #{$striped-bg};
-11:     --#{$variable-prefix}table-striped-color: #{color-contrast($striped-bg)};
-12:     --#{$variable-prefix}table-active-bg: #{$active-bg};
-13:     --#{$variable-prefix}table-active-color: #{color-contrast($active-bg)};
-14:     --#{$variable-prefix}table-hover-bg: #{$hover-bg};
+@media (prefers-reduced-motion: no-preference) { :root { scroll-behavior: smooth; } }
 
-Backtrace:
-/Users/Teresa/www/clouding_admin/scss/bootstrap/mixins/_table-variants.scss:9
-/Users/Teresa/www/clouding_admin/scss/bootstrap/_mixins.scss:31
-/Users/Teresa/www/clouding_admin/cmd/../scss/bootstrap/bootstrap-reboot.scss:14
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:665:in `block'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:234:in `mixin_directive'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:222:in `special_directive'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:197:in `directive'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/engine.rb:312:in `to_tree'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `map'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/tree/root_node.rb:20:in `render'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/engine.rb:281:in `render'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/bin/compass:44:in `call'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/bin/compass:22:in `load'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/bin/compass:22:in `<main>'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/bin/ruby_executable_hooks:15:in `eval'
-/Users/Teresa/.rvm/gems/ruby-2.1.3/bin/ruby_executable_hooks:15:in `<main>'
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; background-color: #fff; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+
+hr { margin: 1rem 0; color: inherit; background-color: currentColor; border: 0; opacity: 0.25; }
+
+hr:not([size]) { height: 1px; }
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: 0.5rem; font-weight: 500; line-height: 1.2; }
+
+h1 { font-size: calc(1.375rem + 1.5vw); }
+@media (min-width: 1200px) { h1 { font-size: 2.5rem; } }
+
+h2 { font-size: calc(1.325rem + 0.9vw); }
+@media (min-width: 1200px) { h2 { font-size: 2rem; } }
+
+h3 { font-size: calc(1.3rem + 0.6vw); }
+@media (min-width: 1200px) { h3 { font-size: 1.75rem; } }
+
+h4 { font-size: calc(1.275rem + 0.3vw); }
+@media (min-width: 1200px) { h4 { font-size: 1.5rem; } }
+
+h5 { font-size: 1.25rem; }
+
+h6 { font-size: 1rem; }
+
+p { margin-top: 0; margin-bottom: 1rem; }
+
+abbr[title], abbr[data-bs-original-title] { text-decoration: underline dotted; cursor: help; text-decoration-skip-ink: none; }
+
+address { margin-bottom: 1rem; font-style: normal; line-height: inherit; }
+
+ol, ul { padding-left: 2rem; }
+
+ol, ul, dl { margin-top: 0; margin-bottom: 1rem; }
+
+ol ol, ul ul, ol ul, ul ol { margin-bottom: 0; }
+
+dt { font-weight: 700; }
+
+dd { margin-bottom: .5rem; margin-left: 0; }
+
+blockquote { margin: 0 0 1rem; }
+
+b, strong { font-weight: bolder; }
+
+small { font-size: 0.875em; }
+
+mark { padding: 0.2em; background-color: #fcf8e3; }
+
+sub, sup { position: relative; font-size: 0.75em; line-height: 0; vertical-align: baseline; }
+
+sub { bottom: -.25em; }
+
+sup { top: -.5em; }
+
+a { color: #0d6efd; text-decoration: underline; }
+a:hover { color: #0a58ca; }
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover { color: inherit; text-decoration: none; }
+
+pre, code, kbd, samp { font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 1em; direction: ltr /* rtl:ignore */; unicode-bidi: bidi-override; }
+
+pre { display: block; margin-top: 0; margin-bottom: 1rem; overflow: auto; font-size: 0.875em; }
+pre code { font-size: inherit; color: inherit; word-break: normal; }
+
+code { font-size: 0.875em; color: #d63384; word-wrap: break-word; }
+a > code { color: inherit; }
+
+kbd { padding: 0.2rem 0.4rem; font-size: 0.875em; color: #fff; background-color: #212529; border-radius: 0.2rem; }
+kbd kbd { padding: 0; font-size: 1em; font-weight: 700; }
+
+figure { margin: 0 0 1rem; }
+
+img, svg { vertical-align: middle; }
+
+table { caption-side: bottom; border-collapse: collapse; }
+
+caption { padding-top: 0.5rem; padding-bottom: 0.5rem; color: #6c757d; text-align: left; }
+
+th { text-align: inherit; text-align: -webkit-match-parent; }
+
+thead, tbody, tfoot, tr, td, th { border-color: inherit; border-style: solid; border-width: 0; }
+
+label { display: inline-block; }
+
+button { border-radius: 0; }
+
+button:focus:not(:focus-visible) { outline: 0; }
+
+input, button, select, optgroup, textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; }
+
+button, select { text-transform: none; }
+
+[role="button"] { cursor: pointer; }
+
+select { word-wrap: normal; }
+select:disabled { opacity: 1; }
+
+[list]::-webkit-calendar-picker-indicator { display: none; }
+
+button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) { cursor: pointer; }
+
+::-moz-focus-inner { padding: 0; border-style: none; }
+
+textarea { resize: vertical; }
+
+fieldset { min-width: 0; padding: 0; margin: 0; border: 0; }
+
+legend { float: left; width: 100%; padding: 0; margin-bottom: 0.5rem; font-size: calc(1.275rem + 0.3vw); line-height: inherit; }
+@media (min-width: 1200px) { legend { font-size: 1.5rem; } }
+legend + * { clear: left; }
+
+::-webkit-datetime-edit-fields-wrapper, ::-webkit-datetime-edit-text, ::-webkit-datetime-edit-minute, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-year-field { padding: 0; }
+
+::-webkit-inner-spin-button { height: auto; }
+
+[type="search"] { outline-offset: -2px; -webkit-appearance: textfield; }
+
+/* rtl:raw:
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="number"] { direction: ltr;
+}
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"... #{$background}\": expected \"{\", was \";\"\A         on line 9 of /Users/Teresa/www/clouding_admin/scss/bootstrap/mixins/_table-variants.scss\A         from line 31 of /Users/Teresa/www/clouding_admin/scss/bootstrap/_mixins.scss\A         from line 14 of /Users/Teresa/www/clouding_admin/cmd/../scss/bootstrap/bootstrap-reboot.scss\A \A 4:     $color: color-contrast(opaque($body-bg, $background));\A 5:     $hover-bg: mix($color, $background, percentage($table-hover-bg-factor));\A 6:     $striped-bg: mix($color, $background, percentage($table-striped-bg-factor));\A 7:     $active-bg: mix($color, $background, percentage($table-active-bg-factor));\A 8: \A 9:     --#{$variable-prefix}table-bg: #{$background};\A 10:     --#{$variable-prefix}table-striped-bg: #{$striped-bg};\A 11:     --#{$variable-prefix}table-striped-color: #{color-contrast($striped-bg)};\A 12:     --#{$variable-prefix}table-active-bg: #{$active-bg};\A 13:     --#{$variable-prefix}table-active-color: #{color-contrast($active-bg)};\A 14:     --#{$variable-prefix}table-hover-bg: #{$hover-bg};"; }
+::-webkit-search-decoration { -webkit-appearance: none; }
+
+::-webkit-color-swatch-wrapper { padding: 0; }
+
+::file-selector-button { font: inherit; }
+
+::-webkit-file-upload-button { font: inherit; -webkit-appearance: button; }
+
+output { display: inline-block; }
+
+iframe { border: 0; }
+
+summary { display: list-item; cursor: pointer; }
+
+progress { vertical-align: baseline; }
+
+[hidden] { display: none !important; }
