@@ -1,12 +1,5 @@
+@import "bootstrap/bootstrap";
 @import "Ginkgo";
-
-$colorLightBlue: rgba(25, 177, 243, 1.00);
-$colorGreyBlue: rgba(185, 214, 231, 1.00);
-$mainBlue: #0073e6;
-
-html {
-  font-size: 13px;
-}
 
 body {
   position: relative;
@@ -17,83 +10,15 @@ body {
   margin: 0;
   padding: 0;
   color: rgba(90, 90, 90, 1.00);
-  background-color: white !important;
 
   font-size: 13px;
-  font-weight: 300;
-  font-family:'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  // text-align: center;
+  font-family: "微軟正黑體", "Open sans", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
   
   // 文字染色，背景色、文字色
   @include selection(rgba(120, 186, 255, 1.00), rgba(255, 255, 255, 1));
 }
 
-
-$colorLightBlue: rgba(25, 177, 243, 1.00);
-
-
-.menuFullBoxs {
-  display: inline-block;
-  width: 100%;
-  background-color: $colorLightBlue;
+.test {
+  width: 500px;
 }
-
-.footer {
-  color: white;
-  background-color: rgba(26, 54, 93, 1.00);
-}
-
-.userBoxs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-}
-
-.topnav {
-  -webkit-box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
-          box-shadow: 0 -3px 31px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
-  @include border-radius(0);
-  margin-bottom: 0;
-  background-color: $colorLightBlue;
-}
-
-.dropdown-menu {
-  left: calc(50% - 180px / 2);
-}
-
-.breadcrumb-item {
-  a {
-    color: $mainBlue !important;
-  }
-
-  &:before {
-    color: $mainBlue !important;
-  }
-}
-
-.page-content {
-  margin-top: 170px !important;
-}
-
-.centBoxs {
-  
-
-  // d
-  height: 300px;
-  border: 1px solid rgba(255, 0, 0, .3);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
