@@ -46,130 +46,110 @@
         <div class="row">
           <div class="col">
             <!-- 選單一 -->
-            <ul class="cd-accordion-menu">
-              <li class="has-children">
-              <input type="checkbox" name="group-1" id="group-1">
-              <label for="group-1">平台管理</label>
-              <ul class="first-ul">
-                <li><a href="platform.html" class="menuLink">平台編輯</a></li>
-                <li><a href="platform_info.html" class="menuLink">平台管理者資料管理(SA)</a></li>
-              </ul>
-            </li>
-            </ul>
+            <div class="cd-accordion-menu">
+              <label>平台管理</label>
+              <div>
+                <a href="platform.html">平台編輯</a>
+                <a href="platform_info.html">平台管理者資料管理(SA)</a>
+              </div>
+            </div>
           </div>
 
           <div class="col">
-          <!-- 選單二 -->      
-            <ul class="cd-accordion-menu">
-                <li class="has-children">
-                <input type="checkbox" name="group-2" id="group-2">
-                <label for="group-2">企業會員管理</label>
-                <ul class="first-ul">
-                  <li><a href="customer_info.html" class="menuLink">業主資料</a></li>
-                  <li><a href="customer_web.html" class="menuLink">企業會員網站管理</a></li>
-                </ul>
-              </li>
-            </ul>
+          <!-- 選單二 -->   
+
+            <div class="cd-accordion-menu">
+              <label>後台權限管理</label>
+
+              <div>
+                <label>企業會員管理</label>
+                <div>
+                  <a href="customer_info.html">業主資料</a>
+                  <a href="customer_web.html">企業會員網站管理</a>
+                </div>
+              </div>
+
+            </div>
+
           </div>
 
           <div class="col">
             <!-- 選單三 -->
-            <ul class="cd-accordion-menu">
-                <li class="has-children">
-                <input type="checkbox" name="group-3" id="group-3">
-                <label for="group-3">後台權限管理</label>
-                <ul class="first-ul">
-                  <li>
-                    <input type="checkbox" name="sub-group-3" id="sub-group-3">
-                    <label for="sub-group-3">系統產品管理</label>
-                    <ul>
-                      <li><a href="product_type.html" class="menuLink">產品類別管理</a></li>
-                      <li><a href="product_info.html" class="menuLink">產品管理</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="mus.html" class="menuLink">權限管理</a></li>
-                  <!--<li><a href="#" class="menuLink">系統訂單管理</a></li>
-                  <li><a href="#" class="menuLink">系統帳款記錄管理</a></li> -->
-                  <li>
-                    <input type="checkbox" name="sub-group-31" id="sub-group-31">
-                    <label for="sub-group-31">類別管理</label>
-                    <ul>
-                      <li><a href="area_type.html" class="menuLink">區域類別管理</a></li>
-                      <li><a href="customer_type.html" class="menuLink">業者類別管理</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <div class="cd-accordion-menu">
+              <label>後台權限管理</label>
+
+              <div>
+                <label>系統產品管理</label>
+                <div>
+                  <a href="product_type.html">產品類別管理</a>
+                  <a href="product_info.html">產品管理</a>
+                </div>
+                <a href="product_info.html">權限管理</a>
+                <!-- <a href="product_info.html">系統訂單管理</a> -->
+                <!-- <a href="product_info.html">系統帳款記錄管理</a> -->
+                <label>類別管理</label>
+                <div>
+                  <a href="area_type.html">區域類別管理</a>
+                  <a href="customer_type.html">業者類別管理</a>
+                </div>
+              </div>
+
+            </div>
           </div>
 
           <div class="col">
             <!-- 選單四 -->
-            <ul class="cd-accordion-menu">
-                <li class="has-children">
-                <input type="checkbox" name="group-4" id="group-4">
-                <label for="group-4">EIP管理系統</label>
-                <ul class="first-ul">
-                  <li><a href="user.html" class="menuLink">員工帳號管理</a></li>
-                  <li>
-                    <input type="checkbox" name="sub-group-4" id="sub-group-4">
-                    <label for="sub-group-4">公告管理</label>
-                    <ul>
-                      <li><a href="announcement_type.html" class="menuLink">公告類別</a></li>
-                      <li><a href="announcement.html" class="menuLink">公告管理</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+
+            <div class="cd-accordion-menu">
+              <label>EIP管理系統</label>
+
+              <div>
+                <a href="user.html">員工帳號管理</a>
+                <label>公告管理</label>
+                <div>
+                  <a href="announcement_type.html">公告類別</a>
+                  <a href="announcement.html">公告管理</a>
+                </div>
+              </div>
+
+            </div>
           </div>
 
           <div class="col">
             <!-- 選單五 -->
-            <ul class="cd-accordion-menu">
-              <li class="has-children">
-                <input type="checkbox" name="group-5" id="group-5">
-                <label for="group-5">ERP管理系統</label>
-                <ul class="first-ul">
-                  <li>
-                    <input type="checkbox" name="sub-group-5" id="sub-group-5">
-                    <label for="sub-group-5">廠商管理</label>
-                    <ul>
-                      <li><a href="company_type.html" class="menuLink">廠商類別管理</a></li>
-                      <li><a href="company.html" class="menuLink">廠商管理</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="qrcode.html" class="menuLink">電子票卷管理</a></li>
-                  <li>
-                    <input type="checkbox" name="sub-group-51" id="sub-group-51">
-                    <label for="sub-group-51">契約管理</label>
-                    <ul>
-                      <li><a href="contract_type.html" class="menuLink">契約類別管理</a></li>
-                      <li><a href="contract.html" class="menuLink">契約管理</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="sub-group-52" id="sub-group-52">
-                    <label for="sub-group-52">應收帳款</label>
-                    <ul>
-                      <li><a href="account_receivable.html" class="menuLink">應收總帳</a></li>
-                      <li><a href="ar_adjust.html" class="menuLink">應收帳調整</a></li>
-                      <li><a href="ar_month.html" class="menuLink">月結單列印</a></li>
-                      <li><a href="ar_notes.html" class="menuLink">帳款記錄管理</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="sub-group-53" id="sub-group-53">
-                    <label for="sub-group-53">應付帳款</label>
-                    <ul>
-                      <li><a href="account_paid.html" class="menuLink">應付總帳</a></li>
-                      <li><a href="ap_month.html" class="menuLink">月結單列印</a></li>
-                      <li><a href="ap_notes.html" class="menuLink">帳款記錄管理</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+
+            <div class="cd-accordion-menu">
+              <label>ERP管理系統</label>
+
+              <div>
+                <label>廠商管理</label>
+                <div>
+                  <a href="company_type.html">廠商類別管理</a>
+                  <a href="company.html">廠商管理</a>
+                </div>
+                <a href="qrcode.html">電子票卷管理</a>
+                <label>契約管理</label>
+                <div>
+                  <a href="contract_type.html">契約類別管理</a>
+                  <a href="contract.html">契約管理</a>
+                </div>
+                <label>應收帳款</label>
+                <div>
+                  <a href="account_receivable.html">應收總帳</a>
+                  <a href="ar_adjust.html">應收帳調整</a>
+                  <a href="ar_month.html">月結單列印</a>
+                  <a href="ar_notes.html">帳款記錄管理</a>
+                </div>
+                <label class='應付帳款'>應收帳款</label>
+                <div>
+                  <a href="account_paid.html">應付總帳</a>
+                  <a href="ap_month.html">月結單列印</a>
+                  <a href="ap_notes.html">帳款記錄管理</a>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>  
