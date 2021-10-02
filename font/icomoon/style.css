@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?873ius');
-  src:  url('fonts/icomoon.eot?873ius#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?873ius') format('truetype'),
-    url('fonts/icomoon.woff?873ius') format('woff'),
-    url('fonts/icomoon.svg?873ius#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?kp9sw3');
+  src:  url('fonts/icomoon.eot?kp9sw3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kp9sw3') format('truetype'),
+    url('fonts/icomoon.woff?kp9sw3') format('woff'),
+    url('fonts/icomoon.svg?kp9sw3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-document-file-pdf:before {
+  content: "\f017";
+}
+.icon-document-file-xls:before {
+  content: "\f018";
+}
+.icon-file-pdf-o:before {
+  content: "\f1c1";
+}
+.icon-file-excel-o:before {
+  content: "\f1c3";
+}
 .icon-error:before {
   content: "\e91e";
 }
@@ -4302,6 +4314,9 @@
 }
 .icon-zoom-out:before {
   content: "\ee94";
+}
+.icon-email1:before {
+  content: "\f019";
 }
 .icon-add-to-list:before {
   content: "\ee95";

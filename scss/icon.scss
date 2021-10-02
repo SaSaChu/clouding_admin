@@ -22,6 +22,10 @@
   font-variant: normal;
 }
 
+.icon-document-file-pdf:before { content: "\f017"; }
+.icon-document-file-xls:before { content: "\f018"; }
+.icon-file-pdf-o:before { content: "\f1c1"; }
+.icon-file-excel-o:before { content: "\f1c3"; }
 .icon-error:before { content: "\e91e"; }
 .icon-error_outline:before { content: "\e915"; }
 .icon-warningreport_problem:before { content: "\e916"; }
@@ -1448,6 +1452,7 @@
 .icon-zap-off:before { content: "\ee92"; }
 .icon-zoom-in:before { content: "\ee93"; }
 .icon-zoom-out:before { content: "\ee94"; }
+.icon-email1:before { content: "\f019"; }
 .icon-add-to-list:before { content: "\ee95"; }
 .icon-classic-computer:before { content: "\ee96"; }
 .icon-controller-fast-backward:before { content: "\ee97"; }

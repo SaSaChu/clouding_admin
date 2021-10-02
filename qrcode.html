@@ -150,8 +150,8 @@
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item active" aria-current="page">平台管理者</li>
-                <li class="breadcrumb-item active" aria-current="page">業主資料</li>
+                <li class="breadcrumb-item active" aria-current="page">ERP管理系統</li>
+                <li class="breadcrumb-item active" aria-current="page">電子票券管理</li>
               </ol>
             </nav>
           </div>
@@ -166,13 +166,43 @@
         <!-- 第一區塊 -->
         <div class="centBoxs mb-5">
           <div class="boxs680 d-grid gap-4 py-4">
-            <div class="col-12">
-              <button class="btn-add float-end">新增業主資料</button>
+            <div class="row">
+              <div class="col-6 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
+              <div class="col-6 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">訂單類型</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option selected class="text-black-30">請選擇</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
             </div>
-            
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公司名稱</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+
+            <div class="row">
+              <div class="col-6 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">活動日期</label>
+                <!-- <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1"> -->
+                <input class="form-control bg-light rounded-pill" type="date" value="2011-08-19" id="example-date-input">
+              </div>
+              <div class="col-6 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">聯絡人</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">業主簡稱</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
+              <div class="col-6 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">聯絡電話</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
             </div>
 
             <div class="col-12 mt-4">
@@ -185,12 +215,7 @@
         <div class="centBoxs nomt">
           <div class="container-fluid border-bottom border-3">
             <div class="row pt-4">
-              <div class="col-6 ">
-                <button class="btn-export exl float-start me-3">匯入EXCEL</button>
-                <button class="btn-export pdf float-start">匯出PDF</button>
-              </div>
-
-              <div class="col-6">
+              <div class="col-12">
                 <nav aria-label="Page navigation example">
                   <ul class="pagination justify-content-end">
                     <li class="page-item disabled">
@@ -211,167 +236,145 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col" class="colorGrey fs-table">流水號</th>
-                <th scope="col" class="colorGrey fs-table">產業別</th>
-                <th scope="col" class="colorGrey fs-table">業者編號</th>
-                <th scope="col" class="colorGrey fs-table">地區</th>
+                <th scope="col" class="colorGrey fs-table">業者類型</th>
                 <th scope="col" class="colorGrey fs-table">業者簡稱</th>
-                <th scope="col" class="colorGrey fs-table">統編</th>
-                <th scope="col" class="colorGrey fs-table">市話</th>
-                <th scope="col" class="colorGrey fs-table">手機</th>
-                <th scope="col" class="colorGrey fs-table">負責人</th>
+                <th scope="col" class="colorGrey fs-table">活動日期</th>
+                <th scope="col" class="colorGrey fs-table">活動項目</th>
+                <th scope="col" class="colorGrey fs-table">聯絡人</th>
+                <th scope="col" class="colorGrey fs-table">聯絡電話</th>
+                <th scope="col" class="colorGrey fs-table">訂單人數</th>
                 <th scope="col" class="colorGrey fs-table">功能</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai666</td>
-                <td>旅遊</td>
-                <td>001123</td>
-                <td>馬公市</td>
-                <td>澎湖休閒</td>
-                <td>12345678</td>
-                <td>06-2719926</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
                 <td>0913-223948</td>
-                <td>朱景</td>
+                <td>01</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
             </tbody>

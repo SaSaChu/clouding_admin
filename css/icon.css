@@ -1,5 +1,13 @@
-@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1633058619') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1633058619') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1633058619') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1633058619') format('svg'); }
+@font-face { font-family: "icon"; src: url('../font/icomoon/fonts/icomoon.eot?1633168266') format('embedded-opentype'), url('../font/icomoon/fonts/icomoon.woff?1633168264') format('woff'), url('../font/icomoon/fonts/icomoon.ttf?1633168264') format('truetype'), url('../font/icomoon/fonts/icomoon.svg?1633168266') format('svg'); }
 *[class^="icon-"]:before, *[class*=" icon-"]:before { font-family: "icon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; }
+
+.icon-document-file-pdf:before { content: "\f017"; }
+
+.icon-document-file-xls:before { content: "\f018"; }
+
+.icon-file-pdf-o:before { content: "\f1c1"; }
+
+.icon-file-excel-o:before { content: "\f1c3"; }
 
 .icon-error:before { content: "\e91e"; }
 
@@ -2852,6 +2860,8 @@
 .icon-zoom-in:before { content: "\ee93"; }
 
 .icon-zoom-out:before { content: "\ee94"; }
+
+.icon-email1:before { content: "\f019"; }
 
 .icon-add-to-list:before { content: "\ee95"; }
 

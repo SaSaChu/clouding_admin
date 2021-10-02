@@ -18,6 +18,10 @@ $(function() {
           .siblings()
           .removeClass('active')
     })
+  })
 
+  // checkboxs 選擇
+  $('input[type="checkbox"][tag]').click(function() {
+    $('input[type="checkbox"][parent~=' + $(this).attr('tag') + ']').prop('checked', $(this).is(':checked'))
   })
 });
