@@ -150,8 +150,8 @@
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item active" aria-current="page">ERP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">契約管理</li>
-                <li class="breadcrumb-item active" aria-current="page">契約類別管理</li>
+                <li class="breadcrumb-item active" aria-current="page">應收帳款</li>
+                <li class="breadcrumb-item active" aria-current="page">應收帳調整</li>
               </ol>
             </nav>
           </div>
@@ -166,28 +166,26 @@
         <!-- 第一區塊 -->
         <div class="centBoxs mb-5">
           <div class="boxs680 d-grid gap-4 py-4">
+
             <div class="col-12">
-              <a href="contract_type_add.html" class="btn-add float-end">新增契約類別</a>
-            </div>
-            
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">類別代碼</label>
+              <label for="formFileLg" class="form-label text-black-50">業者單位</label>
               <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
 
+
             <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">類別名稱</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <label for="formFileLg" class="form-label text-black-50">活動日期</label>
+
+              <div class="input-daterange input-group" data-date-format="dd M, yyyy"  data-date-autoclose="true"  data-provide="datepicker">
+                  <input type="date" class="form-control bg-light rounded-pill" id="example-date-input" name="start" />
+                  <i class="text-secondary px-3">~</i>
+                  <input type="date" class="form-control bg-light rounded-pill" id="example-date-input" name="end" />
+              </div>
             </div>
 
             <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">類別狀態</label>
-              <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                <option selected class="text-black-30">請選擇</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <label for="formFileLg" class="form-label text-black-50">遊客代表</label>
+              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>
 
             <div class="col-12 mt-4">
@@ -200,7 +198,15 @@
         <div class="centBoxs nomt">
           <div class="container-fluid border-bottom border-3">
             <div class="row pt-4">
-              <div class="col-12">
+              <div class="col-6">
+                <div class="form-check form-check-inline float-start mt-10">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" tag='alltag'>
+                  <label class="form-check-label text-secondary" for="flexCheckIndeterminate">全選</label>
+                </div>
+                <button class="btn-export exl float-start">匯出EXCEL</button>
+              </div>
+
+              <div class="col-6">
                 <nav aria-label="Page navigation example">
                   <ul class="pagination justify-content-end">
                     <li class="page-item disabled">
@@ -221,174 +227,252 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col" class="colorGrey fs-table">流水號</th>
-                <th scope="col" class="colorGrey fs-table">類別名稱</th>
-                <th scope="col" class="colorGrey fs-table">類別名稱</th>
-                <th scope="col" class="colorGrey fs-table">狀態</th>
+                <th scope="col" class="colorGrey fs-table">選擇</th>
+                <th scope="col" class="colorGrey fs-table">活動日期</th>
+                <th scope="col" class="colorGrey fs-table">業者簡稱</th>
+                <th scope="col" class="colorGrey fs-table">遊客代表</th>
+                <th scope="col" class="colorGrey fs-table">活動項目</th>
+                <th scope="col" class="colorGrey fs-table">總人數</th>
+                <th scope="col" class="colorGrey fs-table">訂單金額</th>
+                <th scope="col" class="colorGrey fs-table">折扣</th>
+                <th scope="col" class="colorGrey fs-table">現收</th>
+                <th scope="col" class="colorGrey fs-table">未付款</th>
                 <th scope="col" class="colorGrey fs-table">功能</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     333
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     10
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>001123</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁漁區、禁漁</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>2021/05/17</td>
+                <td>澎湖休閒</td>
+                <td>陳怡樺</td>
+                <td>盛夏水上漂浮</td>
+                <td>
+                  <button type="button" class="btn btn-secondary lHight13" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="老人：1人；成年：0人；兒童：1人；保險：0人">
+                     4
+                  </button>
+                </td>
+                <td>NT5,100</td>
+                <td>NT200</td>
+                <td>NT500</td>
+                <td>NT200</td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- 刪除光箱 -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h5>你確定要刪除這筆資料嗎？</h5>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">再想想</button>
-            <button type="button" class="btn btn-primary">確 定</button>
-          </div>
         </div>
       </div>
     </div>

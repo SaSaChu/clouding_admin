@@ -1,5 +1,6 @@
 
 $(function() {
+
   $('.cd-accordion-menu').each(function() {
     let $that = $(this)
     $that.find('> label').click(function() {
@@ -24,4 +25,12 @@ $(function() {
   $('input[type="checkbox"][tag]').click(function() {
     $('input[type="checkbox"][parent~=' + $(this).attr('tag') + ']').prop('checked', $(this).is(':checked'))
   })
+
+  // 表單出現提示泡泡
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+
 });
+

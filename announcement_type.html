@@ -9,7 +9,6 @@
 
     <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
     <script language="javascript" type="text/javascript" src="js/public.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
@@ -128,7 +127,7 @@
                   <a href="ar_month.html">月結單列印</a>
                   <a href="ar_notes.html">帳款記錄管理</a>
                 </div>
-                <label class='應付帳款'>應收帳款</label>
+                <label>應付帳款</label>
                 <div>
                   <a href="account_paid.html">應付總帳</a>
                   <a href="ap_month.html">月結單列印</a>
@@ -167,7 +166,7 @@
         <div class="centBoxs mb-5">
           <div class="boxs680 d-grid gap-4 py-4">
             <div class="col-12">
-              <button class="btn-add float-end">新增公告類別</button>
+              <a href="announcement_type_add.html" class="btn-add float-end">新增公告類別</a>
             </div>
 
             <div class="row">
@@ -241,7 +240,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -254,7 +253,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -267,7 +266,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -280,7 +279,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -293,7 +292,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -306,7 +305,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -319,7 +318,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -332,7 +331,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -345,7 +344,7 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -358,11 +357,29 @@
                 </td>
                 <td>
                   <a href="" class="ta-icon icon-createmode_editedit"></a>
-                  <a href="" class="ta-icon icon-trash-2"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 刪除光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>你確定要刪除這筆資料嗎？</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">再想想</button>
+            <button type="button" class="btn btn-primary">確 定</button>
+          </div>
         </div>
       </div>
     </div>
@@ -382,6 +399,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
   </body>
 </html>
