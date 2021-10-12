@@ -149,9 +149,9 @@
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item active" aria-current="page">EIP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">公告類別管理</li>
-                <li class="breadcrumb-item active" aria-current="page">新增公告類別</li>
+                <li class="breadcrumb-item active" aria-current="page">ERP管理系統</li>
+                <li class="breadcrumb-item active" aria-current="page">電子票券管理</li>
+                <li class="breadcrumb-item active" aria-current="page">檢視</li>
               </ol>
             </nav>
           </div>
@@ -164,38 +164,47 @@
     <div class="fullBoxs mb-5">
       <div class="container-xxl">
         <!-- 第一區塊 -->
+        <!-- 第一區塊 -->
         <div class="centBoxs mb-5">
           <div class="boxs680 py-4">
-            <form class="row g-4">
+            <div class="row g-4">
               <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">公告類別代碼<i class="text-danger ps-2">*</i></label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
+                <label for="formFileLg" class="form-label text-black-50">訂單類型</label>
+                <input type="text" class="form-control rounded-pill" placeholder="訂單類型" disabled>
               </div>
 
               <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">公告類別名稱</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
+                <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
+                <input type="text" class="form-control rounded-pill" placeholder="訂單編號" disabled>
               </div>
 
               <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">公告類別內容</label>
-                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
+                <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
               </div>
 
               <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">公告類別狀態</label>
-                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                  <option selected class="text-black-30">請選擇</option>
-                  <option value="啟用">啟用</option>
-                  <option value="停用">停用</option>
-                </select>
+                <label for="formFileLg" class="form-label text-black-50">活動項目</label>
+                <input type="text" class="form-control rounded-pill" placeholder="活動項目入" disabled>
               </div>
 
-              <div class="col-12 mt-5 d-flex justify-content-between">
-                <button class="btn-lg btn-secondary rounded-pill w-45">取消</button>
-                <button class="btn-lg btn-primary rounded-pill w-50" type="submit">確定</button>
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">聯絡電話</label>
+                <input type="text" class="form-control rounded-pill" placeholder="聯絡電話" disabled>
               </div>
-            </form>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">訂單人數</label>
+                <input type="text" class="form-control rounded-pill" placeholder="訂單人數" disabled>
+              </div>
+
+              <div class="col-12">
+                <p class="text-primary">下載票券QR Code</p>
+                <div class="fullBoxs border bg-light border-radius_ta p-4">
+                   <img src="images/QRcode.png" class="figure-img img-fluid rounded" alt="...">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

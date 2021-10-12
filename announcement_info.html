@@ -150,8 +150,8 @@
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item active" aria-current="page">EIP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">公告類別管理</li>
-                <li class="breadcrumb-item active" aria-current="page">新增公告類別</li>
+                <li class="breadcrumb-item active" aria-current="page">公告資料管理</li>
+                <li class="breadcrumb-item active" aria-current="page">檢視公告資料</li>
               </ol>
             </nav>
           </div>
@@ -166,36 +166,34 @@
         <!-- 第一區塊 -->
         <div class="centBoxs mb-5">
           <div class="boxs680 py-4">
-            <form class="row g-4">
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">公告類別代碼<i class="text-danger ps-2">*</i></label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
-              </div>
+            <dl class="row">
+              <dt class="col-sm-3 text-black-50 py-3">ID：</dt>
+              <dd class="col-sm-9 border-bottom py-3">xai6666</dd>
 
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">公告類別名稱</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
-              </div>
+              <dt class="col-sm-3 text-black-50 py-3">公告日期：</dt>
+              <dd class="col-sm-9 border-bottom py-3">2021/06/30至2021/07/17</dd>
 
+              <dt class="col-sm-3 text-black-50 py-3">公告主題：</dt>
+              <dd class="col-sm-9 border-bottom py-3">刺網禁漁區</dd>
+
+              <dt class="col-sm-3 text-black-50 py-3">公告單位：</dt>
+              <dd class="col-sm-9 border-bottom py-3">農漁局</dd>
+
+              <dt class="col-sm-3 text-black-50 py-3">公告內容：</dt>
+              <dd class="col-sm-9 border-bottom py-3">
+                澎湖縣政府為維護沿近海漁業資源及仔稚魚棲息繁衍，對於較具破壞性之底刺網漁法訂定「澎湖縣底刺網禁漁區、禁漁期及有關限制事宜」，規定凡以底刺網作業之漁船（筏）每年一月、二月、七月及八月間，禁止進入本縣沿岸最高高潮線起向外延伸一浬海域內（包含離島）作業，其餘時間允許總噸位十以上使用網目七公分以上，及總噸位未滿十使用網目三公分以上之底刺網作業漁船（筏）進入本縣沿岸最高高潮線起向外延伸一浬海域內（包含離島）作業。
+
+                另針對內灣海域訂定「本縣內灣海域禁漁區有關限制事宜」，規定凡使用網具類（如焚寄網、扒網、棒受網、刺網）、籠具類、燈火類漁法（具）及潛水從事漁撈採捕行為之船筏（含自用遊樂船筏），全年禁止於內灣海域作業，10噸以下從事單層刺網漁船筏則得於每年3月1日起至6月30日及9月1日起至12月31日進入內灣海域作業，其餘時間（1、2、7、8月）亦不得作業。
+              </dd>
+            </dl>
+
+            <div class="row">
               <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">公告類別內容</label>
-                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <div class="fullBoxs p-4">
+                   <img src="images/pic01.png" class="figure-img img-fluid rounded" alt="...">
+                </div>
               </div>
-
-              <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">公告類別狀態</label>
-                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                  <option selected class="text-black-30">請選擇</option>
-                  <option value="啟用">啟用</option>
-                  <option value="停用">停用</option>
-                </select>
-              </div>
-
-              <div class="col-12 mt-5 d-flex justify-content-between">
-                <button class="btn-lg btn-secondary rounded-pill w-45">取消</button>
-                <button class="btn-lg btn-primary rounded-pill w-50" type="submit">確定</button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -218,6 +216,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
-    
   </body>
 </html>
