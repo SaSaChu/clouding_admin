@@ -148,6 +148,14 @@ footer {
   margin-top: 10px;
 }
 
+.mr-10 {
+  margin-right: 10px;
+}
+
+.table_space {
+  padding: 0 !important;
+}
+
 .border-radius_ta {
   @include border-radius(20px);
   
@@ -170,6 +178,10 @@ footer {
   -moz-border-radius-bottomright: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.bBNo {
+  border-bottom: 0;
 }
 
 

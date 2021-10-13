@@ -161,9 +161,9 @@
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item active" aria-current="page">ERP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">契約管理</li>
-                <li class="breadcrumb-item active" aria-current="page">契約類別管理</li>
-                <li class="breadcrumb-item active" aria-current="page">新增契約類別</li>
+                <li class="breadcrumb-item active" aria-current="page">應付帳款</li>
+                <li class="breadcrumb-item active" aria-current="page">帳款記錄管理</li>
+                <li class="breadcrumb-item active" aria-current="page">編輯帳款記錄</li>
               </ol>
             </nav>
           </div>
@@ -179,28 +179,56 @@
         <div class="centBoxs mb-5">
           <div class="boxs680 py-4">
             <form class="row g-4">
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">契約類別代碼<i class="text-danger ps-2">*</i></label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
-              </div>
-
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">契約類別名稱</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
-              </div>
-
               <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">契約類別內容</label>
-                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <label class="form-label text-black-50">業者名稱<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="業者名稱" required>
               </div>
 
-              <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">契約類別狀態</label>
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">帳款年份</label>
                 <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                  <option selected class="text-black-30">請選擇</option>
-                  <option value="啟用">啟用</option>
-                  <option value="停用">停用</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
                 </select>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">帳款月份</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">應收金額</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="系統自動帶出" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">不足或溢付</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="自動計算：應收金額 - 金額" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">銀行代碼<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="123" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">銀行名稱<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="銀行名稱" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">帳號後五碼<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="12345" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">金額<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="1234" required>
               </div>
 
               <div class="col-12 mt-5 d-flex justify-content-between">

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+
+    <title>行雲旅行社・系統管理者</title>
+
+    <script language="javascript" type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/public.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+  </head>
+  <body class="bg-light">
+
+    <header class="bg-white">
+      <div class="container-fluid px-5">
+        <div class="row">
+          <div class="col" style="padding-left: 0 !important;">
+            <a href="data.html">
+              <img alt="" height="48" src="images/LOGO.svg">
+            </a>
+          </div>
+          <div class="col">
+            <div class="dropdown float-end">
+              <a class="fs-6 username colorBlue dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Hi, 後台管理員
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">我的帳號</a></li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </div>
+            <div class="float-end">
+              <img src="images/users/user-3.jpg" alt="" class="rounded-circle avatar-sm">
+              <!-- <p class="fs-6 username colorBlue">Hi, 後台管理員</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- 選單 -->
+    <nav class="bg-brightBlue">
+      <div class="container-fluid p-3">
+        <div class="row">
+          <div class="col">
+            <!-- 選單一 -->
+            <div class="cd-accordion-menu">
+              <label>平台管理</label>
+              <div>
+                <a href="platform.html">平台編輯</a>
+                <a href="platform_info.html">平台管理者資料管理(SA)</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+          <!-- 選單二 -->   
+            <div class="cd-accordion-menu">
+              <label>企業會員管理</label>
+              <div>
+                <a href="customer.html">業主資料</a>
+                <a href="customer_web.html">企業會員網站管理</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- 選單三 -->
+            <div class="cd-accordion-menu">
+              <label>後台權限管理</label>
+              <div>
+                <!-- <label>系統產品管理</label>
+                <div>
+                  <a href="product_type.html">產品類別管理</a>
+                  <a href="product_info.html">產品管理</a>
+                </div> -->
+                <a href="mus.html">權限管理</a>
+                <!-- <a href="#">系統訂單管理</a> -->
+                <!-- <a href="#">系統帳款記錄管理</a> -->
+                <label>類別管理</label>
+                <div>
+                  <a href="area_type.html">區域類別管理</a>
+                  <a href="customer_type.html">業者類別管理</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- 選單四 -->
+            <div class="cd-accordion-menu">
+              <label>EIP管理系統</label>
+
+              <div>
+                <a href="user.html">員工帳號管理</a>
+                <label>公告管理</label>
+                <div>
+                  <a href="announcement_type.html">公告類別管理</a>
+                  <a href="announcement.html">公告資料管理</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <!-- 選單五 -->
+            <div class="cd-accordion-menu">
+              <label>ERP管理系統</label>
+
+              <div>
+                <label>廠商管理</label>
+                <div>
+                  <a href="company_type.html">廠商類別管理</a>
+                  <a href="company.html">廠商資料管理</a>
+                </div>
+                <a href="qrcode.html">電子票卷管理</a>
+                <label>契約管理</label>
+                <div>
+                  <a href="contract_type.html">契約類別管理</a>
+                  <a href="contract.html">契約資料管理</a>
+                </div>
+                <label>應收帳款</label>
+                <div>
+                  <a href="account_receivable.html">應收總帳</a>
+                  <a href="ar_adjust.html">應收帳調整</a>
+                  <a href="ar_month.html">月結單列印</a>
+                  <a href="ar_notes.html">帳款記錄管理</a>
+                </div>
+                <label>應付帳款</label>
+                <div>
+                  <a href="account_paid.html">應付總帳</a>
+                  <a href="ap_month.html">月結單列印</a>
+                  <a href="ap_notes.html">帳款記錄管理</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>  
+    </nav>
+
+    <!-- 麵包屑 -->
+    <div class="bg-lightBlue px-3">
+      <div class="container-xxl py-4">
+        <div class="row">
+          <div class="col-12 float-end">
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-end">
+                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                <li class="breadcrumb-item active" aria-current="page">ERP管理系統</li>
+                <li class="breadcrumb-item active" aria-current="page">應收總帳</li>
+                <li class="breadcrumb-item active" aria-current="page">月結總帳</li>
+                <li class="breadcrumb-item active" aria-current="page">列印</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 內容 -->
+    <div class="bg-lightBlue h150"></div>
+    <div class="fullBoxs mb-5">
+      <div class="container-xxl">
+        <!-- 第一區塊 -->
+        <div class="centBoxs mb-5">
+          <div class="boxs915 py-4">
+            <div class="row g-4">
+              <table class="table table-bordered border-3">
+                <tbody>
+                  <tr>
+                    <td class="fs-4 fw-normal text-center text-primary">行雲旅行社有限公司</td>
+                  </tr>
+                  <tr>
+                    <td class="fs-5 fw-normal text-center">2021年度7月份帳款明細表——某某某</td>
+                  </tr>
+                  <tr>
+                    <td class="table_space">
+                      <table class="table mb-0">
+                        <tbody>
+                          <tr>
+                            <td class="text-black-50 fw-normal px-3">活動業者：澎湖休閒工作坊</td>
+                          </tr>
+                          <tr>
+                            <td class="text-black-50 fw-normal px-3">活動項目：溫馨親子活動體驗</td>
+                          </tr>
+                          <tr>
+                            <td class="bBNo">
+                              <table class="table mb-0">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">項次</th>
+                                    <th scope="col">活動日期</th>
+                                    <th scope="col">梯次</th>
+                                    <th scope="col">遊客</th>
+                                    <th scope="col">總人數</th>
+                                    <th scope="col">成人</th>
+                                    <th scope="col">老人</th>
+                                    <th scope="col">小孩</th>
+                                    <th scope="col">保險</th>
+                                    <th scope="col">小計</th>
+                                    <th scope="col">備註</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>2021/07/29</td>
+                                    <td>第一梯次</td>
+                                    <td>30</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                    <td>09</td>
+                                    <td>10</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>文字敘述文字敘述</td>
+                                  </tr>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>2021/07/29</td>
+                                    <td>第一梯次</td>
+                                    <td>30</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                    <td>09</td>
+                                    <td>10</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>文字敘述文字敘述</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fs-5 fw-normal px-3 text-end">總計：NT 6,100 元整</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="table_space">
+                      <table class="table mb-0">
+                        <tbody>
+                          <tr>
+                            <td class="text-black-50 fw-normal px-3">活動業者：澎湖休閒工作坊</td>
+                          </tr>
+                          <tr>
+                            <td class="text-black-50 fw-normal px-3">活動項目：溫馨親子活動體驗</td>
+                          </tr>
+                          <tr>
+                            <td class="bBNo">
+                              <table class="table mb-0">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">項次</th>
+                                    <th scope="col">活動日期</th>
+                                    <th scope="col">梯次</th>
+                                    <th scope="col">遊客</th>
+                                    <th scope="col">總人數</th>
+                                    <th scope="col">成人</th>
+                                    <th scope="col">老人</th>
+                                    <th scope="col">小孩</th>
+                                    <th scope="col">保險</th>
+                                    <th scope="col">小計</th>
+                                    <th scope="col">備註</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>2021/07/29</td>
+                                    <td>第一梯次</td>
+                                    <td>30</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                    <td>09</td>
+                                    <td>10</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>文字敘述文字敘述</td>
+                                  </tr>
+                                  <tr>
+                                    <td>01</td>
+                                    <td>2021/07/29</td>
+                                    <td>第一梯次</td>
+                                    <td>30</td>
+                                    <td>20</td>
+                                    <td>10</td>
+                                    <td>09</td>
+                                    <td>10</td>
+                                    <td>01</td>
+                                    <td>02</td>
+                                    <td>文字敘述文字敘述</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="fs-5 fw-normal px-3 text-end">總計：NT 6,100 元整</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fs-5 fw-normal px-3">合計應付帳款：NT 120,200 元整</td>
+                  </tr>
+                  <tr>
+                    <td class="fs-5 fw-normal text-end px-3">累積未結款或溢付：0 元整</td>
+                  </tr>
+                  <tr>
+                    <td class="fs-5 fw-normal text-end px-3">總計應付帳款：NT 120,200 元整</td>
+                  </tr>
+                  <tr>
+                    <td class="text-black-50 fw-normal px-3">
+                      注意事項：</br>
+                      ＊若需開代收轉付發票，請提早通知</br>
+                      ＊本公司採月結賬款方式 (每月初寄單)，僅接受現金繳付或轉帳匯款，謝謝。</br>
+                      ＊核對無誤後，請於每月15日前來店繳款或轉帳匯款，謝謝。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table class="table mb-0 table-borderless">
+                        <tbody>
+                          <tr>
+                            <td class="text-black-50 fw-normal">
+                              玉山銀行 808澎湖分行</br>
+                              帳號：1034-940-133037</br>
+                              戶名：行雲旅行社股份有限公司</br>
+                              ＊匯款後請告知後5碼做確認
+                            </td>
+                            <td class="text-black-50 fw-normal">
+                              聯絡人：楊妹子</br>
+                              電話：06-995-0895</br>
+                              傳真：06-995-3090</br>
+                              信箱：yumi@seawalk.com.tw
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="col-12 mt-5">
+                <button class="btn-lg btn-primary rounded-pill container-fluid">確定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <footer class="footer">
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-sm-12 colorWhite bg-darkBlue py-4">
+              <small>
+                ©
+                <script>
+                document.write(new Date().getFullYear())
+                </script>
+                <span class="d-sm-inline-block">All Rights Reservedclouding Travel Service Co. Ltd.</span>
+              </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

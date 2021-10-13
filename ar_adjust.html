@@ -30,14 +30,25 @@
             </a>
           </div>
           <div class="col">
+            <div class="dropdown float-end">
+              <a class="fs-6 username colorBlue dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Hi, 後台管理員
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">我的帳號</a></li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </div>
             <div class="float-end">
               <img src="images/users/user-3.jpg" alt="" class="rounded-circle avatar-sm">
-              <p class="fs-6 username colorBlue">Hi, 後台管理員</p>
+              <!-- <p class="fs-6 username colorBlue">Hi, 後台管理員</p> -->
             </div>
           </div>
         </div>
       </div>
     </header>
+
 
     <!-- 選單 -->
     <nav class="bg-brightBlue">
@@ -70,11 +81,11 @@
             <div class="cd-accordion-menu">
               <label>後台權限管理</label>
               <div>
-                <label>系統產品管理</label>
+                <!-- <label>系統產品管理</label>
                 <div>
                   <a href="product_type.html">產品類別管理</a>
                   <a href="product_info.html">產品管理</a>
-                </div>
+                </div> -->
                 <a href="mus.html">權限管理</a>
                 <!-- <a href="#">系統訂單管理</a> -->
                 <!-- <a href="#">系統帳款記錄管理</a> -->
@@ -261,7 +272,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -284,7 +295,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -307,7 +318,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -330,7 +341,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -353,7 +364,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -376,7 +387,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -399,7 +410,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -422,7 +433,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -445,7 +456,7 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
@@ -468,11 +479,51 @@
                 <td>NT500</td>
                 <td>NT200</td>
                 <td>
-                  <a href="" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-createmode_editedit" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 修改光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-4">
+              <div class="col-6">
+                <label class="form-label text-black-50">折扣金額：</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label text-black-50">收現金額：</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label text-black-50">匯款後五碼：</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label text-black-50">匯款日期：</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" required>
+              </div>
+              
+              <div class="col-12">
+                <label class="form-label text-black-50">備註：</label>
+                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取 消</button>
+            <button type="button" class="btn btn-primary">確定修改</button>
+          </div>
         </div>
       </div>
     </div>
