@@ -1,0 +1,255 @@
+@import "bootstrap/bootstrap";
+@import "Ginkgo";
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-weight: 500;
+  font-family:'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  background-color: #e2f0f7;
+}
+
+
+// color
+.businessBg {
+  background-color: #e2f0f7;
+}
+
+
+
+// boot
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+}
+
+
+
+// block
+
+
+
+
+// boxs
+.bigBoxsCent {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.centBoxsB {
+  display: inline-block;
+  width: 100%;
+  @include border-radius(20px);
+  background-color: white;
+  padding: 20px;
+  @include box-shadow(0px 7px 29px 0px rgba(100, 100, 111, 0.2));
+}
+
+.fullBoxs {
+  display: inline-block;
+  width: 100%;
+}
+
+.boxs680 {
+  // display: inline-block;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.boxs915 {
+  // display: inline-block;
+  width: 100%;
+  max-width: 915px;
+  margin: 0 auto;
+}
+
+
+.boxs15, .boxs85 {
+  display: inline-block;
+  float: left;
+}
+
+.boxs15 {
+  width: 15%;
+}
+
+.boxs85 {
+  width: 85%;
+  background-color: #dae8f0;
+  @include border-radius(30px);
+}
+
+
+
+
+// other
+.borderBig {
+  border: 20px solid #dae8f0;
+  @include border-radius(40px);
+}
+
+ .avatar-m {
+   height: 5rem;
+   width: 5rem; 
+}
+
+.backTran {
+  background-color: transparent;
+  border: 0;
+}
+
+
+// link
+a {
+  outline: 0;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.btn_menu01 {
+  color: $blue-800;
+  background-color: $blue-100;
+  border-color: $blue-100;
+
+  &:hover {
+    color: white;
+    background-color: $blue-800;
+    border-color: $blue-800;
+  }
+}
+
+.btn_menu02 {
+  color: $blue-800;
+  background-color: $red-100;
+  border-color: $red-100;
+
+  &:hover {
+    color: white;
+    background-color: $red-400;
+    border-color: $red-400;
+  }
+}
+
+.btn_menu03 {
+  color: $blue-800;
+  background-color: $yellow-100;
+  border-color: $yellow-100;
+
+  &:hover {
+    color: white;
+    background-color: $yellow-500;
+    border-color: $yellow-500;
+  }
+}
+
+.btn-add {
+  display: inline-block;
+  font-size: 1.15rem;
+  color: $darkBlue;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:before {
+    display: inline-block;
+    content: '\f014';
+    font-family: icon;
+    margin-right: 5px;
+  }
+
+  &.add-exl {
+    &:before {
+      font-size: 1.3rem;
+      content: '\ebdb';
+      margin-top: -2px;
+    }
+  }
+}
+
+.btn-export {
+  display: inline-block;
+  font-size: 1.15rem;
+  color: $primary;
+  line-height: 40px;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:before {
+    display: inline-block;
+    font-family: icon;
+    margin-right: 12px;
+    // font-size: 1rem;
+  }
+
+  &.exl {
+    &:before {
+      content: '\f1c3';
+    }
+  }
+
+  &.pdf {
+    &:before {
+      content: '\f1c1';
+    }
+  }
+}
+
+.ta-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  color: $primary;
+  @include transition(all .3s);
+  text-align: center;
+
+  &:hover {
+    color: white;
+    @include border-radius(30px);
+    background-color: $grayBlue;
+  }
+}
+
+
+
+
+// text
+.arNum {
+  display: inline-block;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 22px;
+    margin-right: 8px;
+  }
+}
+
+
