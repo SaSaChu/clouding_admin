@@ -141,8 +141,9 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">電子票卷</li>
-                  <li class="breadcrumb-item active" aria-current="page">檢視</li>
+                  <li class="breadcrumb-item active" aria-current="page">應收總帳</li>
+                  <li class="breadcrumb-item active" aria-current="page">月結單列印</li>
+                  <li class="breadcrumb-item active" aria-current="page">檢視月結單</li>
                 </ol>
               </nav>
             </div>
@@ -152,44 +153,64 @@
         <!-- 第一區 -->
         <div class="centBoxsB mb-5">
           <div class="boxs680 py-4">
-            <div class="row g-4">
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">訂單類型</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂單類型" disabled>
-              </div>
-
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂單編號" disabled>
-              </div>
-
+            <form class="row g-4">
               <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
-              </div>
-
-              <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">活動項目</label>
-                <input type="text" class="form-control rounded-pill" placeholder="活動項目入" disabled>
+                <label class="form-label text-black-50">業者名稱<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="業者名稱" required>
               </div>
 
               <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">聯絡電話</label>
-                <input type="text" class="form-control rounded-pill" placeholder="聯絡電話" disabled>
+                <label for="formFileLg" class="form-label text-black-50">帳款年份</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                </select>
               </div>
 
               <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">訂單人數</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂單人數" disabled>
+                <label for="formFileLg" class="form-label text-black-50">帳款月份</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
               </div>
 
-              <div class="col-12">
-                <p class="text-primary">下載票券QR Code</p>
-                <div class="fullBoxs border bg-light border-radius_ta p-4">
-                   <img src="images/QRcode.png" class="figure-img img-fluid rounded" alt="...">
-                </div>
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">應收金額</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="系統自動帶出" required>
               </div>
-            </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">不足或溢付</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="自動計算：應收金額 - 金額" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">銀行代碼<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="123" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">銀行名稱<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="銀行名稱銀行名稱" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">帳號後五碼<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="12345" required>
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">金額<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="23222" required>
+              </div>
+
+              <div class="col-12 mt-5 d-flex justify-content-between">
+                <button class="btn-lg btn-secondary rounded-pill w-45">取消</button>
+                <button class="btn-lg btn-primary rounded-pill w-50" type="submit">確定</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

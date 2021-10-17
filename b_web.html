@@ -141,8 +141,7 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">電子票卷</li>
-                  <li class="breadcrumb-item active" aria-current="page">檢視</li>
+                  <li class="breadcrumb-item active" aria-current="page">官方網站管理</li>
                 </ol>
               </nav>
             </div>
@@ -153,41 +152,123 @@
         <div class="centBoxsB mb-5">
           <div class="boxs680 py-4">
             <div class="row g-4">
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">訂單類型</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂單類型" disabled>
-              </div>
 
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂單編號" disabled>
-              </div>
+              <!-- 基本資料 -->
 
               <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
-              </div>
-
-              <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">活動項目</label>
-                <input type="text" class="form-control rounded-pill" placeholder="活動項目入" disabled>
-              </div>
-
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">聯絡電話</label>
-                <input type="text" class="form-control rounded-pill" placeholder="聯絡電話" disabled>
-              </div>
-
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">訂單人數</label>
-                <input type="text" class="form-control rounded-pill" placeholder="訂單人數" disabled>
-              </div>
-
-              <div class="col-12">
-                <p class="text-primary">下載票券QR Code</p>
-                <div class="fullBoxs border bg-light border-radius_ta p-4">
-                   <img src="images/QRcode.png" class="figure-img img-fluid rounded" alt="...">
+                <label for="formFileLg" class="form-label text-black-50">封面照</label>
+                <div class="input-group">
+                  <input type="file" class="form-control bg-light rounded-pill" id="inputGroupFile04">
                 </div>
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">大頭照</label>
+                <div class="input-group">
+                  <input type="file" class="form-control bg-light rounded-pill" id="inputGroupFile04">
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">店家名稱<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">店家標題</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">店家副標</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12 border-bottom mt-5"></div>
+
+
+              <!-- 社群連結 -->
+
+              <p class="fs-5">社群連結</p>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">Facebook</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">Youtube</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">Google</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">Line</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12 border-bottom mt-5"></div>
+
+
+              <!-- 店家介紹 -->
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">店家簡介</label>
+                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5">CK</textarea>
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">設備</label>
+                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5">CK</textarea>
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">注意事項</label>
+                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5">CK</textarea>
+              </div>
+
+              <div class="col-12 border-bottom mt-5"></div>
+
+
+              <!-- 問答 -->
+
+              <p class="fs-5">問與答</p>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">問題</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">回答</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
+              </div>
+
+              <div class="col-12 border-bottom mt-5"></div>
+
+
+              <!-- 問答 -->
+
+              <p class="fs-5">相片集</p>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">相片集</label>
+                <div class="input-group">
+                  <input type="file" class="form-control bg-light rounded-pill" id="inputGroupFile04">
+                </div>
+              </div>
+
+              <div class="col-12 border-bottom mt-5"></div>
+
+
+
+              <div class="col-12 mt-5 d-flex justify-content-between">
+                <button class="btn-lg btn-secondary rounded-pill w-45">取消</button>
+                <button class="btn-lg btn-primary rounded-pill w-50" type="submit">確定</button>
               </div>
             </div>
           </div>

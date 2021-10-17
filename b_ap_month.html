@@ -141,7 +141,8 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">電子票卷</li>
+                  <li class="breadcrumb-item active" aria-current="page">應付帳款管理</li>
+                  <li class="breadcrumb-item active" aria-current="page">月結單列印</li>
                 </ol>
               </nav>
             </div>
@@ -151,13 +152,21 @@
         <!-- 第一區 -->
         <div class="centBoxsB mb-5">
           <div class="boxs680 d-grid gap-4 py-4">
+
             <div class="row">
-              <div class="col-6 mb-3">
-                <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">月結總帳</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option selected class="text-black-30">請選擇月份</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                </select>
               </div>
-              <div class="col-6 mb-3">
-                <label for="formFileLg" class="form-label text-black-50">業者類型</label>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">狀態</label>
                 <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
                   <option selected class="text-black-30">請選擇</option>
                   <option value="1">One</option>
@@ -166,24 +175,15 @@
                 </select>
               </div>
             </div>
-
-            <div class="row">
-              <div class="col-6 mb-3">
-                <label for="formFileLg" class="form-label text-black-50">活動日期</label>
-                <!-- <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1"> -->
-                <input class="form-control bg-light rounded-pill" type="date" value="2011-08-19" id="example-date-input">
-              </div>
-              <div class="col-6 mb-3">
-                <label for="formFileLg" class="form-label text-black-50">聯絡人</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-6 mb-3">
-                <label for="formFileLg" class="form-label text-black-50">聯絡電話</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-              </div>
+            
+            <div class="col-12">
+              <label for="formFileLg" class="form-label text-black-50">產品名稱</label>
+              <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                <option selected class="text-black-30">請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
             </div>
 
             <div class="col-12 mt-4">
@@ -197,155 +197,227 @@
           <div class="container-fluid border-bottom border-3">
             <div class="row pt-4">
               <div class="col-12">
-                <nav aria-label="Page navigation example">
-                  <ul class="pagination justify-content-end">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                    </li>
-                  </ul>
-                </nav>
+                <div class="form-check form-check-inline float-start mt-10">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" tag='alltag'>
+                  <label class="form-check-label text-secondary" for="flexCheckIndeterminate">全選</label>
+                </div>
+                <button class="btn-export exl float-start">匯出EXCEL</button>
+                <button class="btn-export pdf float-start">匯出PDF</button>
               </div>
             </div>
           </div>
 
-          <table class="table table-striped">
+          <table class="table table-striped border-bottom border-3">
             <thead>
               <tr>
+                <th scope="col" class="colorGrey fs-table">選擇</th>
                 <th scope="col" class="colorGrey fs-table">業者簡稱</th>
-                <th scope="col" class="colorGrey fs-table">活動日期</th>
-                <th scope="col" class="colorGrey fs-table">活動項目</th>
-                <th scope="col" class="colorGrey fs-table">聯絡人</th>
-                <th scope="col" class="colorGrey fs-table">聯絡電話</th>
-                <th scope="col" class="colorGrey fs-table">訂單人數</th>
+                <th scope="col" class="colorGrey fs-table">應付帳款</th>
+                <th scope="col" class="colorGrey fs-table">實付帳款</th>
+                <th scope="col" class="colorGrey fs-table">累積未結款</th>
+                <th scope="col" class="colorGrey fs-table">結帳期限</th>
+                <th scope="col" class="colorGrey fs-table">備註</th>
+                <th scope="col" class="colorGrey fs-table">狀態</th>
                 <th scope="col" class="colorGrey fs-table">功能</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td class="text-success">待處理</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td class="text-danger">未匯款</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
+                </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
                 </td>
               </tr>
               <tr>
-                <td>澎湖休閒工作坊</td>
-                <td>2022/03/01</td>
-                <td>海上活動</td>
-                <td>朱麥香</td>
-                <td>0913-223948</td>
-                <td>01</td>
                 <td>
-                  <a href="b_qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                  <a href="" class="ta-icon icon-download"></a>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" parent='alltag'>
+                  </div>
                 </td>
+                <td>澎湖休閒</td>
+                <td>NT 1,000</td>
+                <td>NT2,100</td>
+                <td>NT500</td>
+                <td>2021/07/31</td>
+                <td>朱麥香</td>
+                <td>完成</td>
+                <td>
+                  <a href="b_ap_notes_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_ap_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                </td>
+              </tr>
+
+              <!-- 總計 -->
+              <tr style="border-top: 3px solid #d9dee2;">
+                <td colspan="7"></td>
+                <td>總應付帳款：</td>
+                <td>NT 1,000</td>
+              </tr>
+              <tr>
+                <td colspan="7"></td>
+                <td>總應付帳款：</td>
+                <td>NT 1,000</td>
+              </tr>
+              <tr>
+                <td colspan="7"></td>
+                <td>總應付帳款：</td>
+                <td>NT 1,000</td>
               </tr>
             </tbody>
           </table>
