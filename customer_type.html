@@ -165,8 +165,9 @@
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item active" aria-current="page">EIP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">公告資料管理</li>
+                <li class="breadcrumb-item active" aria-current="page">後台權限管理</li>
+                <li class="breadcrumb-item active" aria-current="page">類別管理</li>
+                <li class="breadcrumb-item active" aria-current="page">業者類別管理</li>
               </ol>
             </nav>
           </div>
@@ -182,32 +183,29 @@
         <div class="centBoxs mb-5">
           <div class="boxs680 d-grid gap-4 py-4">
             <div class="col-12">
-              <a href="announcement_add.html" class="btn-add float-end">新增公告</a>
+              <a href="customer_type_add.html" class="btn-add float-end">新增業者類別</a>
             </div>
 
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告日期</label>
+            <div class="row">
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">類別代碼</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
 
-              <div class="input-daterange input-group" data-date-format="dd M, yyyy"  data-date-autoclose="true"  data-provide="datepicker">
-                  <input type="date" class="form-control bg-light rounded-pill" id="example-date-input" name="start" />
-                  <i class="text-secondary px-3">~</i>
-                  <input type="date" class="form-control bg-light rounded-pill" id="example-date-input" name="end" />
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">類別名稱</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
               </div>
             </div>
 
             <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告主題</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            </div>
-
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告內容</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            </div>
-
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告單位</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              <label for="formFileLg" class="form-label text-black-50">類別狀態</label>
+              <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                <option selected class="text-black-30">請選擇</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
             </div>
 
             <div class="col-12 mt-4">
@@ -241,158 +239,153 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col" class="colorGrey fs-table">流水號</th>
-                <th scope="col" class="colorGrey fs-table">公告日期</th>
-                <th scope="col" class="colorGrey fs-table">公告主題</th>
-                <th scope="col" class="colorGrey fs-table">公告內容</th>
-                <th scope="col" class="colorGrey fs-table">公告單位</th>
+                <th scope="col" class="colorGrey fs-table">類別代碼</th>
+                <th scope="col" class="colorGrey fs-table">類別名稱</th>
                 <th scope="col" class="colorGrey fs-table">狀態</th>
                 <th scope="col" class="colorGrey fs-table">功能</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>001123</td>
+                <td>水上活動</td>
                 <td>
                   <input type="checkbox" id="switch1" switch="none"/>
                   <label for="switch1" data-off-label="Off" data-on-label="On"></label>
                 </td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>00112311</td>
+                <td>水上活動</td>
+                <td>
+                  <input type="checkbox" id="switch1" switch="none" checked/>
+                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                </td>
+                <td>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>001123</td>
+                <td>水上活動</td>
                 <td>
                   <input type="checkbox" id="switch1" switch="none"/>
                   <label for="switch1" data-off-label="Off" data-on-label="On"></label>
                 </td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>001123</td>
+                <td>水上活動</td>
                 <td>
                   <input type="checkbox" id="switch1" switch="none"/>
                   <label for="switch1" data-off-label="Off" data-on-label="On"></label>
                 </td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>001123</td>
+                <td>水上活動</td>
                 <td>
                   <input type="checkbox" id="switch1" switch="none"/>
                   <label for="switch1" data-off-label="Off" data-on-label="On"></label>
                 </td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>001123</td>
+                <td>水上活動</td>
                 <td>
                   <input type="checkbox" id="switch1" switch="none"/>
                   <label for="switch1" data-off-label="Off" data-on-label="On"></label>
                 </td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>001123</td>
+                <td>水上活動</td>
                 <td>
                   <input type="checkbox" id="switch1" switch="none"/>
                   <label for="switch1" data-off-label="Off" data-on-label="On"></label>
                 </td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>001123</td>
+                <td>水上活動</td>
+                <td>
+                  <input type="checkbox" id="switch1" switch="none" checked/>
+                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                </td>
+                <td>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>001123</td>
+                <td>水上活動</td>
+                <td>
+                  <input type="checkbox" id="switch1" switch="none" checked/>
+                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                </td>
+                <td>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>001123</td>
+                <td>水上活動</td>
+                <td>
+                  <input type="checkbox" id="switch1" switch="none" checked/>
+                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                </td>
+                <td>
+                  <a href="customer_type_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <button class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 刪除光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>你確定要刪除這筆資料嗎？</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">再想想</button>
+            <button type="button" class="btn btn-primary">確 定</button>
+          </div>
         </div>
       </div>
     </div>
@@ -414,5 +407,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
   </body>
 </html>

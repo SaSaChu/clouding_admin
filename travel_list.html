@@ -165,8 +165,9 @@
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                <li class="breadcrumb-item active" aria-current="page">EIP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">公告資料管理</li>
+                <li class="breadcrumb-item active" aria-current="page">平台管理</li>
+                <li class="breadcrumb-item active" aria-current="page">平台編輯</li>
+                <li class="breadcrumb-item active" aria-current="page">旅遊需求</li>
               </ol>
             </nav>
           </div>
@@ -180,39 +181,48 @@
       <div class="container-xxl">
         <!-- 第一區塊 -->
         <div class="centBoxs mb-5">
-          <div class="boxs680 d-grid gap-4 py-4">
-            <div class="col-12">
-              <a href="announcement_add.html" class="btn-add float-end">新增公告</a>
-            </div>
-
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告日期</label>
-
-              <div class="input-daterange input-group" data-date-format="dd M, yyyy"  data-date-autoclose="true"  data-provide="datepicker">
-                  <input type="date" class="form-control bg-light rounded-pill" id="example-date-input" name="start" />
-                  <i class="text-secondary px-3">~</i>
-                  <input type="date" class="form-control bg-light rounded-pill" id="example-date-input" name="end" />
+          <div class="boxs680 py-4">
+            <from class="row g-4">
+              <p>開版示意 - 旅遊需求</p>
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">年度</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option selected class="text-black-30">請選擇年份</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                </select>
               </div>
-            </div>
 
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告主題</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            </div>
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">月份</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option selected class="text-black-30">請選擇月份</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
 
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告內容</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            </div>
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">業者</label>
+                <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
 
-            <div class="col-12">
-              <label for="formFileLg" class="form-label text-black-50">公告單位</label>
-              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
-            </div>
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">收款狀態</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option selected class="text-black-30">請選擇</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
 
-            <div class="col-12 mt-4">
-              <button class="btn-lg btn-primary rounded-pill container-fluid"><i class="bi bi-search" style="margin-right: 8px;"></i>搜尋</button>
-            </div>
+              <div class="col-12 mt-5 d-flex justify-content-between">
+                <button class="btn-lg btn-secondary rounded-pill w-45">取消</button>
+                <button class="btn-lg btn-primary rounded-pill w-50" type="submit">確定</button>
+              </div>
+            </from>
           </div>
         </div>
 
@@ -241,154 +251,145 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col" class="colorGrey fs-table">流水號</th>
-                <th scope="col" class="colorGrey fs-table">公告日期</th>
-                <th scope="col" class="colorGrey fs-table">公告主題</th>
-                <th scope="col" class="colorGrey fs-table">公告內容</th>
-                <th scope="col" class="colorGrey fs-table">公告單位</th>
-                <th scope="col" class="colorGrey fs-table">狀態</th>
+                <th scope="col" class="colorGrey fs-table">業者類型</th>
+                <th scope="col" class="colorGrey fs-table">業者簡稱</th>
+                <th scope="col" class="colorGrey fs-table">活動日期</th>
+                <th scope="col" class="colorGrey fs-table">活動項目</th>
+                <th scope="col" class="colorGrey fs-table">聯絡人</th>
+                <th scope="col" class="colorGrey fs-table">聯絡電話</th>
+                <th scope="col" class="colorGrey fs-table">訂單人數</th>
                 <th scope="col" class="colorGrey fs-table">功能</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
-                <td>
-                  <input type="checkbox" id="switch1" switch="none" checked />
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
-                </td>
-                <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
               <tr>
-                <td>xai6666</td>
-                <td>2021/06/21</td>
-                <td>刺網禁漁區</td>
-                <td>公告修正「澎湖縣底刺網禁</td>
-                <td>縣府公告</td>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <input type="checkbox" id="switch1" switch="none"/>
-                  <label for="switch1" data-off-label="Off" data-on-label="On"></label>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
+              </tr>
+              <tr>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
                 <td>
-                  <a href="announcement_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
+                <td>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
+                <td>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>海上活動</td>
+                <td>澎湖休閒工作坊</td>
+                <td>2022/03/01</td>
+                <td>海上活動</td>
+                <td>朱麥香</td>
+                <td>0913-223948</td>
+                <td>01</td>
+                <td>
+                  <a href="qrcode_de.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="" class="ta-icon icon-download"></a>
                 </td>
               </tr>
             </tbody>

@@ -75,7 +75,12 @@
             <div class="cd-accordion-menu">
               <label>企業會員管理</label>
               <div>
-                <a href="customer.html">業主資料</a>
+                <label>平台編輯</label>
+                <div>
+                  <a href="platform.html">網站首頁編輯</a>
+                  <a href="contact_list.html">聯絡我們</a>
+                  <a href="travel_list.html">旅遊需求</a>
+                </div>
                 <a href="customer_web.html">企業會員網站管理</a>
               </div>
             </div>
@@ -166,8 +171,8 @@
               <ol class="breadcrumb justify-content-end">
                 <li class="breadcrumb-item"><a href="#">首頁</a></li>
                 <li class="breadcrumb-item active" aria-current="page">EIP管理系統</li>
-                <li class="breadcrumb-item active" aria-current="page">公告類別管理</li>
-                <li class="breadcrumb-item active" aria-current="page">編輯公告類別</li>
+                <li class="breadcrumb-item active" aria-current="page">員工帳號管理</li>
+                <li class="breadcrumb-item active" aria-current="page">新增員工帳號</li>
               </ol>
             </nav>
           </div>
@@ -184,28 +189,41 @@
           <div class="boxs680 py-4">
             <form class="row g-4">
               <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">公告類別代碼<i class="text-danger ps-2">*</i></label>
-                <input type="text" class="form-control bg-light rounded-pill" value="公告類別代碼" required>
+                <label for="formFileLg" class="form-label text-black-50">員工帳號<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="員工帳號">
               </div>
 
               <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">公告類別名稱</label>
-                <input type="text" class="form-control bg-light rounded-pill" value="公告類別名稱" required>
+                <label for="formFileLg" class="form-label text-black-50">員工姓名<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="員工姓名">
               </div>
 
-              <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">公告類別內容</label>
-                <textarea class="form-control bg-light border-radius_ta" id="exampleFormControlTextarea1" rows="5">公告類別內容公告類別內容公告類別內容公告類別內容公告類別內容公告類別內容
-                  
-                </textarea>
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">密碼<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="*******">
               </div>
 
-              <div class="col-12">
-                <label for="formFileLg" class="form-label text-black-50">公告類別狀態</label>
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">密碼確認<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="*******">
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">手機號碼<i class="text-danger ps-2">*</i></label>
+                <input type="text" class="form-control bg-light rounded-pill" value="手機號碼">
+              </div>
+
+              <div class="col-6">
+                <label for="formFileLg" class="form-label text-black-50">帳號狀態</label>
                 <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
                   <option value="啟用">啟用</option>
                   <option value="停用">停用</option>
                 </select>
+              </div>
+
+              <div class="col-12">
+                <label for="formFileLg" class="form-label text-black-50">電子信箱</label>
+                <input type="text" class="form-control bg-light rounded-pill" value="電子信箱">
               </div>
 
               <div class="col-12 mt-5 d-flex justify-content-between">
