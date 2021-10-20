@@ -3194,3 +3194,5 @@ button { border: 0; outline: 0; background-color: transparent; text-decoration: 
 .arNum:before { display: inline-block; content: attr(title); font-size: 1.2rem; font-weight: 500; margin-top: 22px; margin-right: 8px; }
 
 .mt-10 { margin-top: 10px; }
+
+.lH15 { line-height: 1.5; }
