@@ -2,6 +2,21 @@
 @import "Ginkgo";
 
 
+.icon-menu01:before { font-size: 2.2rem; }
+.icon-menu02:before { font-size: 2.2rem; }
+.icon-menu03:before { font-size: 2.2rem; }
+.icon-menu04:before { font-size: 2.2rem; }
+.icon-menu05:before { font-size: 2.2rem; }
+.icon-menu06:before { font-size: 2.2rem; }
+.icon-menu07:before { font-size: 2.2rem; }
+.icon-menu08:before { font-size: 2.2rem; }
+.icon-menu09:before { font-size: 2.2rem; }
+.icon-menu10:before { font-size: 2.2rem; }
+.icon-menu11:before { font-size: 2.2rem; }
+.icon-menu12:before { font-size: 2.2rem; }
+.icon-menu13:before { font-size: 2.2rem; }
+
+
 html {
   font-size: 16px;
 }
@@ -29,7 +44,11 @@ body {
 
 
 // block
-
+.bg-blue {
+  background-color: #dae8f0;
+  @include border-radius(40px);
+  padding: 20px;
+}
 
 
 
@@ -97,7 +116,7 @@ body {
   @include border-radius(40px);
 }
 
- .avatar-m {
+.avatar-m {
    height: 5rem;
    width: 5rem; 
 }
@@ -105,6 +124,18 @@ body {
 .backTran {
   background-color: transparent;
   border: 0;
+}
+
+.r40 {
+  @include border-radius(40px);
+}
+
+.py40 {
+  padding: 40px 0;
+}
+
+.p40 {
+  padding: 40px;
 }
 
 
@@ -262,6 +293,11 @@ button {
 .lH15 {
   line-height: 1.5;
 } 
+
+.h550 {
+  height: 550px;
+  overflow-y: scroll;
+}
 
 
 
