@@ -3197,6 +3197,8 @@ body { font-weight: 500; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue"
 
 .p40 { padding: 40px; }
 
+.pno { padding: 0 !important; }
+
 a { outline: 0; text-decoration: none; display: inline-block; }
 
 button { border: 0; outline: 0; background-color: transparent; text-decoration: none; }
@@ -3232,3 +3234,8 @@ button { border: 0; outline: 0; background-color: transparent; text-decoration: 
 .lH15 { line-height: 1.5; }
 
 .h550 { height: 550px; overflow-y: scroll; }
+
+.tablehover { display: none; }
+.tablehover.tShow { display: inline-block; }
+
+.ttbody { max-width: 100%; width: 100%; display: inline-table; }

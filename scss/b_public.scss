@@ -138,6 +138,10 @@ body {
   padding: 40px;
 }
 
+.pno {
+  padding: 0 !important;
+}
+
 
 
 // link
@@ -300,4 +304,18 @@ button {
 }
 
 
+// effect
+.tablehover {
+  display: none;
+
+  &.tShow {
+    display: inline-block;
+  }
+}
+
+.ttbody {
+  max-width: 100%;
+  width: 100%;
+  display: inline-table;
+}
 

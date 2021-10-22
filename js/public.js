@@ -1,6 +1,10 @@
 
 $(function() {
 
+  $('.tablecheck').click(function(){
+    $('.tablehover').toggleClass('tShow');
+  })
+
   $('.cd-accordion-menu').each(function() {
     let $that = $(this)
     $that.find('> label').click(function() {
