@@ -141,8 +141,7 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">應收帳款管理</li>
-                  <li class="breadcrumb-item active" aria-current="page">應收總帳</li>
+                  <li class="breadcrumb-item active" aria-current="page">產品管理(單品)</li>
                 </ol>
               </nav>
             </div>
@@ -151,60 +150,18 @@
 
         <!-- 第一區 -->
         <div class="centBoxsB mb-5">
-          <div class="boxs915">
-            <p class="fs-4 text-secondary p-2">2021年度，目前應收帳款總數</p>
-            <div class="container">
-              <div class="row gx-5">
-                <div class="col">
-                 <div class="p-2 bg-darkBlue rounded">
-                  <p class="arNum" title='NT'>10,000</p>
-                  <p class="fs-5 text-white text-center">總應收帳款</p>
-                 </div>
-                </div>
-                <div class="col">
-                  <div class="p-2 bg-primary rounded">
-                    <p class="arNum" title='NT'>10,000</p>
-                    <p class="fs-5 text-white text-center">總應實收帳款</p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="p-2 bg-brightBlue rounded">
-                    <p class="arNum" title='NT'>10,000</p>
-                    <p class="fs-5 text-white text-center">總累積未結帳款</p>
-                  </div>
-                </div>
-              </div>
+          <div class="boxs680 d-grid gap-4 py-4">
+            <div class="col-12">
+              <a href="b_product_add.html" class="btn-add float-end">新增產品</a>
             </div>
-          </div>
-          
-          <div class="boxs680 py-4">
-            <div class="row g-4">
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">年度</label>
-                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                  <option selected class="text-black-30">請選擇年份</option>
-                  <option value="2021">2021</option>
-                  <option value="2020">2020</option>
-                </select>
-              </div>
 
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">月份</label>
-                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                  <option selected class="text-black-30">請選擇月份</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">業者</label>
+            <div class="row">
+              <div class="col-12 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">產品名稱</label>
                 <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" aria-label="Example text with button addon" aria-describedby="button-addon1">
               </div>
-
-              <div class="col-6">
-                <label for="formFileLg" class="form-label text-black-50">收款狀態</label>
+              <div class="col-12 mb-3">
+                <label for="formFileLg" class="form-label text-black-50">狀態</label>
                 <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
                   <option selected class="text-black-30">請選擇</option>
                   <option value="1">One</option>
@@ -212,10 +169,10 @@
                   <option value="3">Three</option>
                 </select>
               </div>
+            </div>
 
-              <div class="col-12 mt-5">
-                <button class="btn-lg btn-primary rounded-pill container-fluid"><i class="bi bi-search" style="margin-right: 8px;"></i>搜尋</button>
-              </div>
+            <div class="col-12 mt-4">
+              <button class="btn-lg btn-primary rounded-pill container-fluid"><i class="bi bi-search" style="margin-right: 8px;"></i>搜尋</button>
             </div>
           </div>
         </div>
@@ -225,102 +182,164 @@
           <div class="container-fluid border-bottom border-3">
             <div class="row pt-4">
               <div class="col-12">
-                <p class="fs-4 text-secondary">2021年度總帳</p>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
 
-          <table class="table table-striped border-bottom border-3">
+          <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col" class="colorGrey fs-table">月份</th>
-                <th scope="col" class="colorGrey fs-table">業者簡稱</th>
-                <th scope="col" class="colorGrey fs-table">應收帳款</th>
-                <th scope="col" class="colorGrey fs-table">實收帳款</th>
-                <th scope="col" class="colorGrey fs-table">累積未結款</th>
+                <th scope="col" class="colorGrey fs-table">產品編碼</th>
+                <th scope="col" class="colorGrey fs-table">產品名稱</th>
+                <th scope="col" class="colorGrey fs-table">狀態</th>
+                <th scope="col" class="colorGrey fs-table">排序</th>
                 <th scope="col" class="colorGrey fs-table">功能</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>1月</td>
-                <td>丁旺旺</td>
-                <td>NT2,100</td>
-                <td>NT500</td>
-                <td>NT2,100</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
                 <td>
-                  <a href="b_ar_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td>丁旺旺</td>
-                <td>NT2,100</td>
-                <td>NT500</td>
-                <td>NT2,100</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
                 <td>
-                  <a href="b_ar_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td>丁旺旺</td>
-                <td>NT2,100</td>
-                <td>NT500</td>
-                <td>NT2,100</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-danger">未啟用</td>
+                <td>01</td>
                 <td>
-                  <a href="b_ar_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td>丁旺旺</td>
-                <td>NT2,100</td>
-                <td>NT500</td>
-                <td>NT2,100</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-danger">未啟用</td>
+                <td>01</td>
                 <td>
-                  <a href="b_ar_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td>丁旺旺</td>
-                <td>NT2,100</td>
-                <td>NT500</td>
-                <td>NT2,100</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
                 <td>
-                  <a href="b_ar_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
               <tr>
-                <td></td>
-                <td>丁旺旺</td>
-                <td>NT2,100</td>
-                <td>NT500</td>
-                <td>NT2,100</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
                 <td>
-                  <a href="b_ar_month_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                 </td>
               </tr>
-
-              <!-- 總計 -->
-              <tr style="border-top: 3px solid #d9dee2;">
-                <td colspan="4"></td>
-                <td>總應收帳款：</td>
-                <td>NT 1,000</td>
+              <tr>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
+                <td>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
               </tr>
               <tr>
-                <td colspan="4"></td>
-                <td>總應收帳款：</td>
-                <td>NT 1,000</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
+                <td>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
               </tr>
               <tr>
-                <td colspan="4"></td>
-                <td>總應收帳款：</td>
-                <td>NT 1,000</td>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
+                <td>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>001</td>
+                <td>產品名稱文字產品名稱文字產品名稱文字文字文字</td>
+                <td class="text-success">啟用</td>
+                <td>01</td>
+                <td>
+                  <a href="b_product_de.html" class="ta-icon icon-createmode_editedit"></a>
+                  <a href="b_product_info.html" class="ta-icon icon-remove_red_eyevisibility"></a>
+                  <button href="" class="ta-icon icon-trash-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                </td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 刪除光箱 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>你確定要刪除這筆資料嗎？</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">再想想</button>
+            <button type="button" class="btn btn-primary">確 定</button>
+          </div>
         </div>
       </div>
     </div>
