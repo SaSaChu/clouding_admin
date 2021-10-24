@@ -1,9 +1,19 @@
 
 $(function() {
 
-  $('.tablecheck').click(function(){
-    $('.tablehover').toggleClass('tShow');
-  })
+  $('.table-striped').each (function () {
+    var $that = $(this);
+    
+    $that.find ('.tablecheck').click (function () {
+      $that.find ('.tablehover').removeClass ('tShow')
+      $(this).toggleClass ('tShow');
+    });
+  });
+
+  
+  // $('.tablecheck').click(function(){
+  //   $('.tablehover').toggleClass('tShow');
+  // })
 
   $('.cd-accordion-menu').each(function() {
     let $that = $(this)

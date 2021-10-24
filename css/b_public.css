@@ -3165,9 +3165,13 @@ body { font-weight: 500; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue"
 
 .businessBg { background-color: #e2f0f7; }
 
+.proBg { background-color: #e9ecef; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
+
 .breadcrumb { background-color: transparent; padding: 0; }
 
 .bg-blue { background-color: #dae8f0; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; padding: 20px; }
+
+.boxs4 { display: inline-block; float: left; width: calc(100% / 4); text-align: center; }
 
 .bigBoxsCent { width: 100%; height: 100vh; margin: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; }
 
@@ -3198,6 +3202,12 @@ body { font-weight: 500; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue"
 .p40 { padding: 40px; }
 
 .pno { padding: 0 !important; }
+
+.tStep { display: inline-block; width: 100%; padding: 15px; font-size: 1rem; color: #6c757d; }
+.tStep.ts_Blue { background-color: #376092; color: white; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
+.tStep.ts_Blue2 { background-color: #376092; color: white; -webkit-border-top-left-radius: 40px; -webkit-border-bottom-left-radius: 40px; -moz-border-radius-topleft: 40px; -moz-border-radius-bottomleft: 40px; border-top-left-radius: 40px; border-bottom-left-radius: 40px; }
+.tStep.ts_Blue3 { background-color: #376092; color: white; -webkit-border-top-right-radius: 40px; -webkit-border-bottom-right-radius: 40px; -moz-border-radius-topright: 40px; -moz-border-radius-bottomright: 40px; border-top-right-radius: 40px; border-bottom-right-radius: 40px; }
+.tStep.ts_Blue4 { background-color: #376092; color: white; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 
 a { outline: 0; text-decoration: none; display: inline-block; }
 
@@ -3233,7 +3243,13 @@ button { border: 0; outline: 0; background-color: transparent; text-decoration: 
 
 .lH15 { line-height: 1.5; }
 
+.lH40 { line-height: 39px; }
+
 .h550 { height: 550px; overflow-y: scroll; }
+
+.form-dw-auto { display: inline-block !important; width: auto  !important; }
+
+.pr-form { display: inline-block; width: 70px; padding: 0.375rem 0.75rem; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; background-color: #fff; background-clip: padding-box; border: 1px solid #ced4da; -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 0.25rem; }
 
 .tablehover { display: none; }
 .tablehover.tShow { display: inline-block; }
