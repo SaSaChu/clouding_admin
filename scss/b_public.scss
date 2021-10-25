@@ -65,6 +65,96 @@ body {
   text-align: center;
 }
 
+.boxs5 {
+  display: inline-block;
+  width: calc(100% / 5);
+  float: left;
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  
+  > div {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    @include border-radius(100px);
+    border: 2px solid #e6e6e6;
+    z-index: 2000;
+    padding: 25px 0;
+
+    &.stepHover {
+      background-color: $primary;
+      border: 2px solid $primary;
+
+      > b, > p {
+        color: white;
+      }
+    }
+
+    > b {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #e6e6e6;
+      line-height: 65px;
+    }
+
+    > p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #e6e6e6;
+    }
+  }
+
+  &.stepB {
+    &:before {
+      background-color: $primary;
+    }
+  }
+
+  &.stepA {
+    &:after {
+      background-color: $primary;
+    }
+  }
+
+  &.stepBA {
+    &:before, &:after {
+      background-color: $primary;
+    }
+  }
+
+  &:before, &:after {
+    content: '';
+    width: 20%;
+    height: 4px;
+    position: absolute;
+    background-color: #e6e6e6;
+    top: 70px;
+    z-index: -2;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+}
+
 .bigBoxsCent {
   width: 100%;
   height: 100vh;
@@ -82,6 +172,23 @@ body {
   background-color: white;
   padding: 20px;
   @include box-shadow(0px 7px 29px 0px rgba(100, 100, 111, 0.2));
+
+  &.proUse {
+    padding: 0;
+  }
+}
+
+.proTitle {
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: white;
 }
 
 .fullBoxs {
@@ -94,6 +201,10 @@ body {
   width: 100%;
   max-width: 680px;
   margin: 0 auto;
+
+  &.pro680 {
+    padding: 20px;
+  }
 }
 
 .boxs915 {
@@ -101,6 +212,10 @@ body {
   width: 100%;
   max-width: 915px;
   margin: 0 auto;
+
+  &.pro915 {
+    padding: 20px;
+  }
 }
 
 
@@ -119,6 +234,34 @@ body {
   @include border-radius(30px);
 }
 
+.proNumShow {
+  display: inline-block;
+  width: 170px;
+  height: 170px;
+  margin: 0 15px;
+  @include border-radius(100px);
+  color: white;
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+
+  &:after {
+    display: block;
+    content: attr(title);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: -10px;
+  }
+  
+
+  &.pro_red {
+    background-color: $red-300;
+  }
+
+  &.pro_blue {
+    background-color: $cyan-500;
+  }
+}
 
 
 
@@ -269,6 +412,25 @@ button {
       content: '\ebdb';
       margin-top: -2px;
     }
+  }
+}
+
+.btn-import {
+  display: inline-block;
+  font-size: 1.15rem;
+  color: $darkBlue;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:before {
+    display: inline-block;
+    content: '\e9c3';
+    font-family: icon;
+    font-size: 1.4rem;
+    margin-right: 5px;
+    margin-top: -3px;
   }
 }
 

@@ -141,119 +141,153 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">產品險管理</li>
-                  <li class="breadcrumb-item active" aria-current="page">編輯產品險</li>
+                  <li class="breadcrumb-item active" aria-current="page">接單管理</li>
+                  <li class="breadcrumb-item active" aria-current="page">新增訂單</li>
                 </ol>
               </nav>
             </div>
           </div>
         </div>
 
-        <!-- 第一區 -->
-        <div class="centBoxsB mb-5">
-          <div class="boxs680 py-4">
-            <form class="row g-4">
-              <p class="fs-5 form-label text-primary" style="margin-bottom: -10px;">產品險資料</p>
+        <!-- 第二區 -->
+        <div class="centBoxsB">
+          <div class="boxs915 d-grid gap-4 py-4">
+            <!-- step -->
+            <div class="fullBoxs mb-4">
+              <div class="boxs5">
+                <div class="stepHover">
+                  <b>01</b>
+                  <p>訂位</p>
+                </div>
+              </div>
+              <div class="boxs5">
+                <div>
+                  <b>02</b>
+                  <p>填寫資料</p>
+                </div>
+              </div>
+              <div class="boxs5">
+                <div>
+                  <b>03</b>
+                  <p>保險資料</p>
+                </div>
+              </div>
+              <div class="boxs5">
+                <div>
+                  <b>04</b>
+                  <p>訂單確認</p>
+                </div>
+              </div>
+              <div class="boxs5">
+                <div>
+                  <b>05</b>
+                  <p>完成</p>
+                </div>
+              </div>
+            </div>
 
-              <div class="col-6 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">產品險單號</label>
-                <input type="text" class="form-control rounded-pill" placeholder="請輸入" disabled>
+            <div class="row">
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                      A.【 2021/07/28 】溫馨親子活動體驗：第一梯次，9:30~10:30
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                      <div class="boxs680">
+                         <form class="row py-3">
+                            <div class="col-12 pb-4">
+                              <label for="formFileLg" class="form-label text-black-50">訂位總人數</label>
+                              <input type="text" class="form-control bg-light rounded-pill" value="3" >
+                              <p class="text-danger pt-3">* 該梯次僅剩 1 位，其餘請訂後補</p>
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">普通票：14 - 65歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">敬老票：65歲以上</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">兒童票：6~14歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">保險票：6歲以下</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-12 border-bottom my-3"></div>
+                            
+                             <p class="fs-5 text-primary text-end" >訂位總人數：2</p>
+                         </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      B.【 2021/07/28 】溫馨親子活動體驗：第一梯次，9:30~10:30
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                      <div class="boxs680">
+                         <form class="row py-3">
+                            <div class="col-12 pb-4">
+                              <label for="formFileLg" class="form-label text-black-50">訂位總人數</label>
+                              <input type="text" class="form-control bg-light rounded-pill" value="3" >
+                              <p class="text-danger pt-3">* 該梯次僅剩 1 位，其餘請訂後補</p>
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">普通票：14 - 65歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">敬老票：65歲以上</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">兒童票：6~14歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">保險票：6歲以下</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-12 border-bottom my-3"></div>
+                            
+                             <p class="fs-5 text-primary text-end" >訂位總人數：2</p>
+                         </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-6 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                <input type="text" class="form-control rounded-pill" placeholder="請輸入" disabled>
-              </div>
-
-              <div class="col-12 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">產品業者</label>
-                <input type="text" class="form-control rounded-pill" placeholder="請輸入" disabled>
-              </div>
-
-              <div class="col-12 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">活動項目</label>
-                <input type="text" class="form-control rounded-pill" placeholder="請輸入" disabled>
-              </div>
-
-              <div class="col-12 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">業者聯絡電話</label>
-                <input type="text" class="form-control rounded-pill" placeholder="請輸入" disabled>
-              </div>
-
-              <div class="col-6 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">遊客代表</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="遊客代表">
-              </div>
-
-              <div class="col-6 pb-4">
-                <label for="formFileLg" class="form-label text-black-50">遊客代表電話</label>
-                <input type="text" class="form-control bg-light rounded-pill" placeholder="遊客代表電話">
+              <div class="row pt-4">
+                <div class="col">
+                  <a href='b_take_orders.html' class="btn-lg btn-outline-secondary rounded-pill  text-center" style="border: 1px solid;">取消，回訂單首頁</a>
+                </div>
+                <div class="col-auto">
+                  <a href='b_take_order_add01.html' class="btn-lg btn-secondary rounded-pill text-center">上一步</a>
+                </div>
+                <div class="col-auto">
+                  <a href='b_take_order_add03.html' class="btn-lg btn-primary rounded-pill text-center" type="submit">下一步</a>
+                </div>
               </div>
               
-              <div class="col-12 border-bottom my-3"></div>
-
-              <p for="formFileLg" class="fs-5 form-label text-primary">遊客清單</p>
-
-              <div class="row">
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="王小明">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="19890923">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="F123456789">
-                </div>
-
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="王小明">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="19890923">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="F123456789">
-                </div>
-
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="王小明">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="19890923">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="F123456789">
-                </div>
-
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="王小明">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="19890923">
-                </div>
-                <div class="col-4 pb-4">
-                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                  <input type="text" class="form-control bg-light rounded-pill" placeholder="F123456789">
-                </div>
-              </div>
-
-              <div class="col-12 mt-5 d-flex justify-content-between">
-                <button class="btn-lg btn-secondary rounded-pill w-45">清除重填</button>
-                <!-- <button class="btn-lg btn-primary rounded-pill w-50" type="submit">確定</button> -->
-                <a class="btn-lg btn-primary text-center rounded-pill w-50" href="b_data.html">確認送出</a>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

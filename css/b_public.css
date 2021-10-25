@@ -3173,21 +3173,46 @@ body { font-weight: 500; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue"
 
 .boxs4 { display: inline-block; float: left; width: calc(100% / 4); text-align: center; }
 
+.boxs5 { display: inline-block; width: calc(100% / 5); float: left; text-align: center; position: relative; z-index: 999; }
+.boxs5 > div { display: inline-block; width: 140px; height: 140px; background-color: white; -moz-border-radius: 100px; -webkit-border-radius: 100px; border-radius: 100px; border: 2px solid #e6e6e6; z-index: 2000; padding: 25px 0; }
+.boxs5 > div.stepHover { background-color: #006ac2; border: 2px solid #006ac2; }
+.boxs5 > div.stepHover > b, .boxs5 > div.stepHover > p { color: white; }
+.boxs5 > div > b { font-size: 4rem; font-weight: 900; color: #e6e6e6; line-height: 65px; }
+.boxs5 > div > p { font-size: 1.2rem; font-weight: 500; color: #e6e6e6; }
+.boxs5.stepB:before { background-color: #006ac2; }
+.boxs5.stepA:after { background-color: #006ac2; }
+.boxs5.stepBA:before, .boxs5.stepBA:after { background-color: #006ac2; }
+.boxs5:before, .boxs5:after { content: ''; width: 20%; height: 4px; position: absolute; background-color: #e6e6e6; top: 70px; z-index: -2; }
+.boxs5:before { left: 0; }
+.boxs5:after { right: 0; }
+.boxs5:first-child:before { display: none; }
+.boxs5:last-child:after { display: none; }
+
 .bigBoxsCent { width: 100%; height: 100vh; margin: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; }
 
 .centBoxsB { display: inline-block; width: 100%; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; background-color: white; padding: 20px; -moz-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); -webkit-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); }
+.centBoxsB.proUse { padding: 0; }
+
+.proTitle { -webkit-border-top-left-radius: 20px; -webkit-border-top-right-radius: 20px; -moz-border-radius-topleft: 20px; -moz-border-radius-topright: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; padding: 20px; font-size: 1.3rem; font-weight: 500; color: white; }
 
 .fullBoxs { display: inline-block; width: 100%; }
 
 .boxs680 { width: 100%; max-width: 680px; margin: 0 auto; }
+.boxs680.pro680 { padding: 20px; }
 
 .boxs915 { width: 100%; max-width: 915px; margin: 0 auto; }
+.boxs915.pro915 { padding: 20px; }
 
 .boxs15, .boxs85 { display: inline-block; float: left; }
 
 .boxs15 { width: 15%; }
 
 .boxs85 { width: 85%; background-color: #dae8f0; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px; }
+
+.proNumShow { display: inline-block; width: 170px; height: 170px; margin: 0 15px; -moz-border-radius: 100px; -webkit-border-radius: 100px; border-radius: 100px; color: white; font-size: 5rem; font-weight: 900; text-align: center; }
+.proNumShow:after { display: block; content: attr(title); font-size: 1.3rem; font-weight: 500; margin-top: -10px; }
+.proNumShow.pro_red { background-color: #ea868f; }
+.proNumShow.pro_blue { background-color: #0dcaf0; }
 
 .borderBig { border: 20px solid #dae8f0; -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px; }
 
@@ -3226,6 +3251,10 @@ button { border: 0; outline: 0; background-color: transparent; text-decoration: 
 .btn-add:hover { opacity: .8; }
 .btn-add:before { display: inline-block; content: '\f014'; font-family: icon; margin-right: 5px; }
 .btn-add.add-exl:before { font-size: 1.3rem; content: '\ebdb'; margin-top: -2px; }
+
+.btn-import { display: inline-block; font-size: 1.15rem; color: #1a365d; }
+.btn-import:hover { opacity: .8; }
+.btn-import:before { display: inline-block; content: '\e9c3'; font-family: icon; font-size: 1.4rem; margin-right: 5px; margin-top: -3px; }
 
 .btn-export { display: inline-block; font-size: 1.15rem; color: #006ac2; line-height: 40px; }
 .btn-export:hover { opacity: .8; }
