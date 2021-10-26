@@ -432,6 +432,26 @@ button {
     margin-right: 5px;
     margin-top: -3px;
   }
+
+  &.btn-ex {
+    &:before {
+      display: inline-block;
+      content: '\e9c4';
+      font-size: 1.4rem;
+      margin-right: 5px;
+      margin-top: -3px;
+    }
+  }
+
+  &.btn-cl {
+    &:before {
+      display: inline-block;
+      content: '\eb76';
+      font-size: 1.4rem;
+      margin-right: 5px;
+      margin-top: -3px;
+    }
+  }
 }
 
 .btn-export {

@@ -187,7 +187,28 @@
             </div>
 
             <div class="row">
+              <p class="fs-5 text-primary">訂單資料</p>
+              <div class="col-12 my-3">
+                <label for="formFileLg" class="form-label text-black-50">票卷類型</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option value="QR Code">QR Code</option>
+                  <option value="實體票卷">實體票卷</option>
+                </select>
+              </div>
+
+              <div class="row mb-5">
+                <div class="col-6 mb-3">
+                  <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
+                  <input type="text" class="form-control rounded-pill" placeholder="12312321312" disabled>
+                </div>
+                <div class="col-6 mb-3">
+                  <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
+                  <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
+                </div>
+              </div>
+
               <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="col-12 border-bottom border-2"></div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
@@ -198,26 +219,7 @@
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body">
                       <div class="boxs680">
-                        <p class="fs-5 text-primary">活動明細</p>
-                        <div class="col-12 my-3">
-                          <label for="formFileLg" class="form-label text-black-50">票卷類型</label>
-                          <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                            <option value="QR Code">QR Code</option>
-                            <option value="實體票卷">實體票卷</option>
-                          </select>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-6 mb-3">
-                            <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                            <input type="text" class="form-control rounded-pill" placeholder="12312321312" disabled>
-                          </div>
-                          <div class="col-6 mb-3">
-                            <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
-                            <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
-                          </div>
-                        </div>
-
+                        <p class="fs-5 text-primary mb-3">活動明細</p>
                         <div class="col-12 mb-3">
                           <label for="formFileLg" class="form-label text-black-50">活動項目</label>
                           <input type="text" class="form-control rounded-pill" placeholder="溫馨親子活動體驗" disabled>
@@ -315,26 +317,7 @@
                   <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
                       <div class="boxs680">
-                        <p class="fs-5 text-primary">活動明細</p>
-                        <div class="col-12 my-3">
-                          <label for="formFileLg" class="form-label text-black-50">票卷類型</label>
-                          <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
-                            <option value="QR Code">QR Code</option>
-                            <option value="實體票卷">實體票卷</option>
-                          </select>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-6 mb-3">
-                            <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                            <input type="text" class="form-control rounded-pill" placeholder="12312321312" disabled>
-                          </div>
-                          <div class="col-6 mb-3">
-                            <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
-                            <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
-                          </div>
-                        </div>
-
+                        <p class="fs-5 text-primary mb-3">活動明細</p>
                         <div class="col-12 mb-3">
                           <label for="formFileLg" class="form-label text-black-50">活動項目</label>
                           <input type="text" class="form-control rounded-pill" placeholder="溫馨親子活動體驗" disabled>
@@ -423,19 +406,17 @@
                   </div>
                 </div>
               </div>
-              
-              <div class="row pt-4">
-                <div class="col">
-                  <a href='b_take_orders.html' class="btn-lg btn-outline-secondary rounded-pill  text-center" style="border: 1px solid;">取消，回訂單首頁</a>
-                </div>
-                <div class="col-auto">
-                  <a href='b_take_order_add04.html' class="btn-lg btn-secondary rounded-pill text-center">上一步</a>
-                </div>
-                <div class="col-auto">
-                  <a href='b_take_order_add06.html' class="btn-lg btn-primary rounded-pill text-center" type="submit">確定送出</a>
-                </div>
+            </div>
+            <div class="row pt-4">
+              <div class="col">
+                <a href='b_take_orders.html' class="btn-lg btn-outline-secondary rounded-pill  text-center" style="border: 1px solid;">取消，回訂單首頁</a>
               </div>
-
+              <div class="col-auto">
+                <a href='b_take_order_add04.html' class="btn-lg btn-secondary rounded-pill text-center">上一步</a>
+              </div>
+              <div class="col-auto">
+                <a href='b_take_order_add06.html' class="btn-lg btn-primary rounded-pill text-center" type="submit">確定送出</a>
+              </div>
             </div>
           </div>
         </div>

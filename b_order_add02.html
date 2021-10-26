@@ -141,7 +141,7 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">接單管理</li>
+                  <li class="breadcrumb-item active" aria-current="page">下單管理</li>
                   <li class="breadcrumb-item active" aria-current="page">新增訂單</li>
                 </ol>
               </nav>
@@ -154,20 +154,20 @@
           <div class="boxs915 d-grid gap-4 py-4">
             <!-- step -->
             <div class="fullBoxs mb-4">
-              <div class="boxs5 stepA">
+              <div class="boxs5">
                 <div class="stepHover">
                   <b>01</b>
                   <p>訂位</p>
                 </div>
               </div>
-              <div class="boxs5 stepBA">
-                <div class="stepHover">
+              <div class="boxs5">
+                <div>
                   <b>02</b>
                   <p>填寫資料</p>
                 </div>
               </div>
-              <div class="boxs5 stepB">
-                <div class="stepHover">
+              <div class="boxs5">
+                <div>
                   <b>03</b>
                   <p>保險資料</p>
                 </div>
@@ -188,77 +188,44 @@
 
             <div class="row">
               <div class="accordion" id="accordionPanelsStayOpenExample">
-                <div class="col-12 border-bottom border-2"></div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                       A.【 2021/07/28 】溫馨親子活動體驗：第一梯次，9:30~10:30
                     </button>
                   </h2>
-
                   <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                     <div class="accordion-body">
-                      <div class="fullBoxs">
-                        <a href="company_add.html" class="btn-add float-end">新增人員資料</a>
-                        <a href="company_add.html" class="btn-import float-end me-3">匯入資料</a>
-                        <button class="btn-sm btn-outline-secondary rounded-pill text-center" style="border: 1px solid;">複製保險人</button>
-                      </div>
-
-                      <div class="col-12 border-bottom my-3"></div>
-
                       <div class="boxs680">
-                        <div class="col-12 pb-4">
-                          <table class="table">
-                            <tr>
-                              <td style="width: 10%;">1.</td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 10%;">
-                                <button class="ta-icon icon-trash-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="width: 10%;">2.</td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 10%;">
-                                <button class="ta-icon icon-trash-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
+                         <form class="row py-3">
+                            <div class="col-12 pb-4">
+                              <label for="formFileLg" class="form-label text-black-50">訂位總人數</label>
+                              <input type="text" class="form-control bg-light rounded-pill" value="3" >
+                              <p class="text-danger pt-3">* 該梯次僅剩 1 位，其餘請訂後補</p>
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">普通票：14 - 65歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">敬老票：65歲以上</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">兒童票：6~14歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">保險票：6歲以下</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-12 border-bottom my-3"></div>
+                            
+                             <p class="fs-5 text-primary text-end" >訂位總人數：2</p>
+                         </form>
                       </div>
                     </div>
                   </div>
@@ -272,109 +239,55 @@
                   </h2>
                   <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                     <div class="accordion-body">
-                      <div class="fullBoxs">
-                        <a href="company_add.html" class="btn-add float-end">新增人員資料</a>
-                        <a href="company_add.html" class="btn-import float-end me-3">匯入資料</a>
-                        <button class="btn-sm btn-outline-secondary rounded-pill text-center" style="border: 1px solid;">複製保險人</button>
-                      </div>
-
-                      <div class="col-12 border-bottom my-3"></div>
-
                       <div class="boxs680">
-                        <div class="col-12 pb-4">
-                          <table class="table">
-                            <tr>
-                              <td style="width: 10%;">1.</td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 10%;">
-                                <button class="ta-icon icon-trash-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="width: 10%;">2.</td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">姓名</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">生日</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 26%;">
-                                <div class="col pb-3">
-                                  <label for="formFileLg" class="form-label text-black-50">身分證字號</label>
-                                  <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入" >
-                                </div>
-                              </td>
-                              <td style="width: 10%;">
-                                <button class="ta-icon icon-trash-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
+                         <form class="row py-3">
+                            <div class="col-12 pb-4">
+                              <label for="formFileLg" class="form-label text-black-50">訂位總人數</label>
+                              <input type="text" class="form-control bg-light rounded-pill" value="3" >
+                              <p class="text-danger pt-3">* 該梯次僅剩 1 位，其餘請訂後補</p>
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">普通票：14 - 65歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">敬老票：65歲以上</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">兒童票：6~14歲</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+                            <div class="col-6 pb-3">
+                              <label for="formFileLg" class="form-label text-black-50">保險票：6歲以下</label>
+                              <input type="text" class="form-control bg-light rounded-pill" placeholder="請輸入人數" >
+                            </div>
+
+                            <div class="col-12 border-bottom my-3"></div>
+                            
+                             <p class="fs-5 text-primary text-end" >訂位總人數：2</p>
+                         </form>
                       </div>
-                    </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-
               <div class="row pt-4">
                 <div class="col">
-                  <a href='b_take_orders.html' class="btn-lg btn-outline-secondary rounded-pill  text-center" style="border: 1px solid;">取消，回訂單首頁</a>
+                  <a href='b_orders.html' class="btn-lg btn-outline-secondary rounded-pill  text-center" style="border: 1px solid;">取消，回訂單首頁</a>
                 </div>
                 <div class="col-auto">
-                  <a href='b_take_order_add03.html' class="btn-lg btn-secondary rounded-pill text-center">上一步</a>
+                  <a href='b_order_add01.html' class="btn-lg btn-secondary rounded-pill text-center">上一步</a>
                 </div>
                 <div class="col-auto">
-                  <a href='b_take_order_add05.html' class="btn-lg btn-secondary rounded-pill text-center">略過此步驟</a>
-                </div>
-                <div class="col-auto">
-                  <a href='b_take_order_add05.html' class="btn-lg btn-primary rounded-pill text-center" type="submit">下一步</a>
+                  <a href='b_order_add03.html' class="btn-lg btn-primary rounded-pill text-center" type="submit">下一步</a>
                 </div>
               </div>
               
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 刪除光箱 -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <h5>你確定要刪除這筆資料嗎？</h5>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">再想想</button>
-            <button type="button" class="btn btn-primary">確 定</button>
           </div>
         </div>
       </div>

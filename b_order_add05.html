@@ -141,7 +141,7 @@
               <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">接單管理</li>
+                  <li class="breadcrumb-item active" aria-current="page">下單管理</li>
                   <li class="breadcrumb-item active" aria-current="page">新增訂單</li>
                 </ol>
               </nav>
@@ -172,14 +172,14 @@
                   <p>保險資料</p>
                 </div>
               </div>
-              <div class="boxs5 stepBA">
+              <div class="boxs5 stepB">
                 <div class="stepHover">
                   <b>04</b>
                   <p>訂單確認</p>
                 </div>
               </div>
-              <div class="boxs5 stepB">
-                <div class="stepHover">
+              <div class="boxs5">
+                <div>
                   <b>05</b>
                   <p>完成</p>
                 </div>
@@ -187,40 +187,27 @@
             </div>
 
             <div class="row">
-              <div class="col-12 border-bottom border-2 my-3"></div>
-              <div class="col-6">
-                <p class="fs-5 text-danger">你的訂單已完成！</p>
-              </div>
-              <div class="col-6">
-                <a href="company_add.html" class="btn-import btn-ex float-end">匯出訂單明細</a>
-              </div>
-              <div class="col-12 border-bottom border-2 my-3"></div>
-
-              <div class="col-8">
-                <div class="col-12 my-3">
-                  <label for="formFileLg" class="form-label text-black-50">票卷類型</label>
-                    <input type="text" class="form-control rounded-pill" placeholder="QR Code" disabled>
-                </div>
-
-                <div class="row mb-5">
-                  <div class="col-6 mb-3">
-                    <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
-                    <input type="text" class="form-control rounded-pill" placeholder="12312321312" disabled>
-                  </div>
-                  <div class="col-6 mb-3">
-                    <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
-                    <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="fullBoxs border bg-light rounded p-4 text-center mt-3">
-                   <img src="images/QRcode.png" class="figure-img img-fluid rounded" alt="...">
-                </div>
-                <button class="container-fluid btn btn-secondary my-3" type="submit">下載票券QR Code</button>
+              <p class="fs-5 text-primary">訂單資料</p>
+              <div class="col-12 my-3">
+                <label for="formFileLg" class="form-label text-black-50">票卷類型</label>
+                <select class="form-select bg-light rounded-pill" id="inputGroupSelect01">
+                  <option value="QR Code">QR Code</option>
+                  <option value="實體票卷">實體票卷</option>
+                </select>
               </div>
 
-              <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+              <div class="row mb-5">
+                <div class="col-6 mb-3">
+                  <label for="formFileLg" class="form-label text-black-50">訂單編號</label>
+                  <input type="text" class="form-control rounded-pill" placeholder="12312321312" disabled>
+                </div>
+                <div class="col-6 mb-3">
+                  <label for="formFileLg" class="form-label text-black-50">訂位業者</label>
+                  <input type="text" class="form-control rounded-pill" placeholder="訂位業者" disabled>
+                </div>
+              </div>
+
+              <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="col-12 border-bottom border-2"></div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -420,9 +407,16 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 mt-5 text-center">
-              <!-- <button class="btn-lg btn-secondary rounded-pill w-45">取消</button> -->
-              <a href='b_take_orders.html' class="btn-lg btn-primary rounded-pill w-50 text-center" type="submit">回訂單首頁</a>
+            <div class="row pt-4">
+              <div class="col">
+                <a href='b_orders.html' class="btn-lg btn-outline-secondary rounded-pill  text-center" style="border: 1px solid;">取消，回訂單首頁</a>
+              </div>
+              <div class="col-auto">
+                <a href='b_order_add04.html' class="btn-lg btn-secondary rounded-pill text-center">上一步</a>
+              </div>
+              <div class="col-auto">
+                <a href='b_order_add06.html' class="btn-lg btn-primary rounded-pill text-center" type="submit">確定送出</a>
+              </div>
             </div>
           </div>
         </div>
