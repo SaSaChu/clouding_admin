@@ -11,6 +11,11 @@ body {
   font-family:'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
 }
 
+.tableCent {
+  word-break: break-all;
+  min-width: 300px;
+  max-width: 400px;
+}
 
 // color
 .colorWhite {
