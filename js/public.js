@@ -1,6 +1,12 @@
 
 $(function() {
 
+  // icon的提示效果
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+
   $('.table-striped').each (function () {
     var $that = $(this);
     
