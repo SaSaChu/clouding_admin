@@ -3288,3 +3288,15 @@ button { border: 0; outline: 0; background-color: transparent; text-decoration: 
 .tablehover.tShow { display: inline-block; }
 
 .ttbody { max-width: 100%; width: 100%; display: inline-table; }
+
+/* CSS Switch */
+input[switch] { display: none; }
+input[switch] + label { font-size: 1em; line-height: 1; width: 60px; height: 30px; background-color: #c4cbce; background-image: none; border-radius: 2rem; padding: 0.16667rem; cursor: pointer; display: inline-block; text-align: center; position: relative; font-weight: 500; -webkit-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+input[switch] + label:before { color: #1d1e21; content: attr(data-off-label); display: block; font-weight: 500; font-size: 13px; line-height: 28px; position: absolute; left: 1px; margin: 3px; top: -2px; text-align: center; min-width: 1.66667rem; overflow: hidden; -webkit-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+input[switch] + label:after { content: ''; position: absolute; right: 3px; background-color: white; -webkit-box-shadow: none; box-shadow: none; border-radius: 2rem; height: 25px; width: 25px; top: 2px; -webkit-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+input[switch]:checked + label { background-color: #43d359; }
+input[switch]:checked + label:before { color: #fff; content: attr(data-on-label); left: auto; right: 3px; }
+input[switch]:checked + label:after { right: 33px; background-color: white; }
+input[switch="bool"] + label { background-color: #ec536c; }
+input[switch="bool"] + label:before { color: #fff; }
+input[switch="bool"]:checked + label:before { color: #fff; }
