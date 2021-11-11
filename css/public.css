@@ -3138,6 +3138,7 @@ html { font-size: 16px; }
 body { font-weight: 500; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif; }
 
 .tableCent { word-break: break-all; min-width: 300px; max-width: 400px; }
+.tableCent p { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; }
 
 .colorWhite { color: white; }
 
