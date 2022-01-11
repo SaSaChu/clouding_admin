@@ -25,6 +25,45 @@ body {
   }
 }
 
+// green版本・開始
+$primary: rgba(57, 106, 7, 1.00);
+$breadcrumb-active-color: rgba(49, 93, 9, 1.00) !important;
+
+a {
+  color: $primary;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.bg-brightBlue {
+  background-color: rgba(57, 106, 7, 1.00) !important;
+}
+
+.bg-lightBlue {
+  background-color: rgba(166, 187, 141, 1.00) !important;
+}
+
+.breadcrumb-item {
+  &.active {
+    color: rgba(57, 106, 7, 1.00) !important;
+  }
+}
+
+.bg-darkBlue {
+  background-color: rgba(34, 59, 6, 1.00) !important;
+}
+
+.bg-primary {
+  background-color: rgba(89, 112, 65, 1.00) !important;
+}
+
+.btn-primary {
+  background-color: rgba(57, 106, 7, 1.00) !important;
+}
+// green版本・結束
+
 
 // color
 .colorWhite {
