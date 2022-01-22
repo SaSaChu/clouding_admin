@@ -176,6 +176,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @include range-width(0, 450px) {
+    display: block;
+  }
 }
 
 .centBoxs {
@@ -540,6 +544,14 @@ button {
 // all
 .mt-10 {
   margin-top: 10px;
+}
+
+.mt8 {
+  margin-top: .8rem;
+
+  @include range-width(0, 450px) {
+    margin-top: 0;
+  }
 }
 
 .lH15 {

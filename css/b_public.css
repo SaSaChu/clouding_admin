@@ -3192,6 +3192,7 @@ body { font-weight: 500; font-family: 'Roboto', 'Noto Sans TC', "Helvetica Neue"
 .boxs5:last-child:after { display: none; }
 
 .bigBoxsCent { width: 100%; height: 100vh; margin: auto; display: flex; justify-content: center; align-items: center; flex-direction: column; }
+@media screen and (max-width: 449px) and (min-width: 0) { .bigBoxsCent { display: block; } }
 
 .centBoxs { display: inline-block; width: 100%; -moz-border-radius: 20px; -webkit-border-radius: 20px; border-radius: 20px; background-color: white; padding: 20px; -moz-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); -webkit-box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); }
 .centBoxs.proUse { padding: 0; }
@@ -3274,6 +3275,9 @@ button { border: 0; outline: 0; background-color: transparent; text-decoration: 
 .arNum:before { display: inline-block; content: attr(title); font-size: 1.2rem; font-weight: 500; margin-top: 22px; margin-right: 8px; }
 
 .mt-10 { margin-top: 10px; }
+
+.mt8 { margin-top: .8rem; }
+@media screen and (max-width: 449px) and (min-width: 0) { .mt8 { margin-top: 0; } }
 
 .lH15 { line-height: 1.5; }
 
