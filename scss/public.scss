@@ -105,6 +105,123 @@ footer {
   margin: 0 auto;
 }
 
+.box990 {
+  display: inline-block;
+  width: 100%;
+  max-width: 990px;
+}
+
+.t-r, .t-l {
+  display: flex;
+  float: left;
+  padding: 20px;
+}
+
+.t-r {
+  width: 200px;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px dotted rgba(230, 231, 235, 1.00);
+}
+
+.t-l {
+  width: calc(100% - 200px);
+  background-color: rgba(238, 239, 241, 1.00);
+  flex-direction: column;
+}
+
+.qrbox {
+  display: inline-block;
+  @include border-radius(15px);
+  border: 1px solid rgba(19, 38, 125, 1.00);
+  padding: 10px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    max-width: 120px;
+  }
+}
+
+.tt-box {
+  display: inline-block;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.tick-tag {
+  display: inline-block;
+  width: 100%;
+  @include border-radius(5px);
+  background-color: rgba(195, 153, 54, 1.00);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 4px 0;
+  margin: 15px 0 20px 0;
+}
+
+.tick-text {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.08rem;
+  text-align: center;
+  color: rgba(20, 21, 52, 1.00);
+}
+
+.tick-st {
+  display: inline-block;
+  font-size: .8rem;
+  text-align: center;
+  line-height: 16px;
+  color: rgba(20, 21, 52, 1.00);
+}
+
+.tick-number {
+  display: inline-block;
+  width: 100%;
+  font-size: 1rem;
+  color: red;
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    color: rgba(20, 21, 52, 1.00);
+    font-size: 1rem;
+  }
+}
+
+.tick-name {
+  display: inline-block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(20, 21, 52, 1.00);
+}
+
+.tick-note {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(23, 42, 136, 1.00);
+  @include border-radius(5px);
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
+.tick-w-box {
+  display: inline-block;
+  width: 100%;
+  @include border-radius(5px);
+  background-color: white;
+  padding: 8px 10px;
+  color: rgba(20, 21, 52, 1.00);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
 
 
 // other

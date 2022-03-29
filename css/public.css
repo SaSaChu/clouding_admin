@@ -3161,6 +3161,34 @@ footer { display: inline-block; width: 100%; }
 
 .boxs915 { width: 100%; max-width: 915px; margin: 0 auto; }
 
+.box990 { display: inline-block; width: 100%; max-width: 990px; }
+
+.t-r, .t-l { display: flex; float: left; padding: 20px; }
+
+.t-r { width: 200px; background-color: white; flex-direction: column; justify-content: center; align-items: center; border-left: 2px dotted #e6e7eb; }
+
+.t-l { width: calc(100% - 200px); background-color: #eeeff1; flex-direction: column; }
+
+.qrbox { display: inline-block; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; border: 1px solid #13267d; padding: 10px; overflow: hidden; }
+.qrbox img { width: 100%; max-width: 120px; }
+
+.tt-box { display: inline-block; width: 100%; padding-top: 15px; }
+
+.tick-tag { display: inline-block; width: 100%; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background-color: #c39936; color: white; font-size: 1rem; text-align: center; padding: 4px 0; margin: 15px 0 20px 0; }
+
+.tick-text { display: inline-block; width: 100%; font-size: 1.08rem; text-align: center; color: #141534; }
+
+.tick-st { display: inline-block; font-size: .8rem; text-align: center; line-height: 16px; color: #141534; }
+
+.tick-number { display: inline-block; width: 100%; font-size: 1rem; color: red; }
+.tick-number:before { display: inline-block; content: attr(title); color: #141534; font-size: 1rem; }
+
+.tick-name { display: inline-block; width: 100%; font-size: 2rem; font-weight: 500; color: #141534; }
+
+.tick-note { display: inline-block; width: 100%; background-color: #172a88; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 10px; color: white; font-size: 1rem; }
+
+.tick-w-box { display: inline-block; width: 100%; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background-color: white; padding: 8px 10px; color: #141534; font-size: 1.2rem; margin-bottom: 15px; }
+
 .avatar-sm { height: 3rem; width: 3rem; }
 
 .username { display: inline-block; line-height: 50px; margin-bottom: 0; margin-left: 10px; }
